@@ -1,0 +1,13 @@
+{
+  "id": "awt:war_master",
+  "models": {
+    "inactive": "awt:item/sonic/war_master_inactive",
+    "interaction": "awt:item/sonic/war_master_interaction",
+    "overload": "awt:item/sonic/war_master_overload",
+    "scanning": "awt:item/sonic/war_master_scanning",
+    "tardis": "awt:item/sonic/war_master_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

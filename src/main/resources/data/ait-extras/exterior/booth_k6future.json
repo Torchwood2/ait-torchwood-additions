@@ -1,0 +1,7 @@
+{
+    "id": "awt:futurek6",
+    "category": "ait:exterior/booth",
+    "parent": "ait:exterior/booth/default",
+    "texture": "awt:textures/exterior/booth_k6future.png",
+    "emission": "awt:textures/exterior/booth_k6future_emission.png"
+  }

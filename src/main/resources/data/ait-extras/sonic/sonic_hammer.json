@@ -1,0 +1,13 @@
+{
+  "id": "awt:sonic_hammer",
+  "models": {
+    "inactive": "awt:item/sonic/sonic_hammer_inactive",
+    "interaction": "awt:item/sonic/sonic_hammer_interaction",
+    "overload": "awt:item/sonic/sonic_hammer_overload",
+    "scanning": "awt:item/sonic/sonic_hammer_scanning",
+    "tardis": "awt:item/sonic/sonic_hammer_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

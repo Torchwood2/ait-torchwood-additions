@@ -1,0 +1,13 @@
+{
+  "id": "awt:missy_umbrella",
+  "models": {
+    "inactive": "awt:item/sonic/sonic_umbrella_inactive",
+    "interaction": "awt:item/sonic/sonic_umbrella_interaction",
+    "overload": "awt:item/sonic/sonic_umbrella_overload",
+    "scanning": "awt:item/sonic/sonic_umbrella_scanning",
+    "tardis": "awt:item/sonic/sonic_umbrella_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

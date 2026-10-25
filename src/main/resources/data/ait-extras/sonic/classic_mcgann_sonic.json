@@ -1,0 +1,13 @@
+{
+  "id": "awt:classic_mcgann_sonic",
+  "models": {
+    "inactive": "awt:item/sonic/classic_mcgann",
+    "interaction": "awt:item/sonic/classic_mcgann_sonic_interaction",
+    "overload": "awt:item/sonic/classic_mcgann_sonic_overload",
+    "scanning": "awt:item/sonic/classic_mcgann_sonic_scanning",
+    "tardis": "awt:item/sonic/classic_mcgann_sonic_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

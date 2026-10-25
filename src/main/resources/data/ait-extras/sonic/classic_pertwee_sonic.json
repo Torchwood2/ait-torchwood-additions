@@ -1,0 +1,13 @@
+{
+  "id": "awt:classic_pertwee_sonic",
+  "models": {
+    "inactive": "awt:item/sonic/classic_pertwee_sonic",
+    "interaction": "awt:item/sonic/classic_pertwee_sonic_interaction",
+    "overload": "awt:item/sonic/classic_pertwee_sonic_overload",
+    "scanning": "awt:item/sonic/classic_pertwee_sonic_scanning",
+    "tardis": "awt:item/sonic/classic_pertwee_sonic_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

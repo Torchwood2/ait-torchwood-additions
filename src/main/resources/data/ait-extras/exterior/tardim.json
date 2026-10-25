@@ -1,0 +1,16 @@
+{
+    "id": "awt:tardimog",
+    "category": "ait:exterior/tardim",
+    "parent": "ait:exterior/tardim/default",
+    "texture": "awt:textures/exterior/tardim_default.png",
+    "emission": "awt:textures/exterior/tardim_default_emission.png",
+    "overrides": {
+        "snowy": "ait:textures/blockentities/exteriors/tardim/biome/tardim_snowy.png",
+        "sculk": "ait:textures/blockentities/exteriors/tardim/biome/tardim_sculk.png",
+        "sandy": "ait:textures/blockentities/exteriors/tardim/biome/tardim_sand.png",
+        "red_sandy": "ait:textures/blockentities/exteriors/tardim/biome/tardim_red_sand.png",
+        "muddy": "ait:textures/blockentities/exteriors/tardim/biome/tardim_mud.png",
+        "chorus": "ait:textures/blockentities/exteriors/tardim/biome/tardim_chorus.png",
+        "cherry": "ait:textures/blockentities/exteriors/tardim/biome/tardim_cherry.png"
+    }
+}

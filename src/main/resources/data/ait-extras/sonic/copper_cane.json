@@ -1,0 +1,13 @@
+{
+  "id": "awt:copper_cane",
+  "models": {
+    "inactive": "awt:item/sonic/copper_cane_inactive",
+    "interaction": "awt:item/sonic/copper_cane_interactive",
+    "overload": "awt:item/sonic/copper_cane_overload",
+    "scanning": "awt:item/sonic/copper_cane_scanning",
+    "tardis": "awt:item/sonic/copper_cane_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

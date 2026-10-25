@@ -1,0 +1,16 @@
+{
+    "id": "awt:glasgow",
+    "category": "ait:exterior/police_box",
+    "parent": "ait:exterior/police_box/default",
+    "texture": "awt:textures/exterior/glasglow.png",
+    "emission": "awt:textures/exterior/glasglow_emission.png",
+    "overrides": {
+        "snowy": "ait:textures/blockentities/exteriors/police_box/biome/police_box_snowy.png",
+        "sculk": "ait:textures/blockentities/exteriors/police_box/biome/police_box_sculk.png",
+        "sandy": "ait:textures/blockentities/exteriors/police_box/biome/police_box_sand.png",
+        "red_sandy": "ait:textures/blockentities/exteriors/police_box/biome/police_box_red_sand.png",
+        "muddy": "ait:textures/blockentities/exteriors/police_box/biome/police_box_mud.png",
+        "chorus": "ait:textures/blockentities/exteriors/police_box/biome/police_box_chorus.png",
+        "cherry": "ait:textures/blockentities/exteriors/police_box/biome/police_box_cherry.png"
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "awt:blunt",
+  "models": {
+    "inactive": "awt:item/sonic/blunt",
+    "interaction": "awt:item/sonic/blunt_interaction",
+    "overload": "awt:item/sonic/blunt_overload",
+    "scanning": "awt:item/sonic/blunt_scanning",
+    "tardis": "awt:item/sonic/blunt_tardis"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "awt:hedgehog_sonic",
+  "models": {
+    "inactive": "awt:item/sonic/sonic_hedgehog_inactive",
+    "interaction": "awt:item/sonic/sonic_hedgehog_interaction",
+    "overload": "awt:item/sonic/sonic_hedgehog_overload",
+    "scanning": "awt:item/sonic/sonic_hedgehog_scanning",
+    "tardis": "awt:item/sonic/sonic_hedgehog_tardis"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}
