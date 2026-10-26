@@ -1,6 +1,6 @@
 package uk.jacobempire.ata.datagen.datagen_providers;
 
-import io.wispforest.owo.itemgroup.OwoItemGroup;
+
 import uk.jacobempire.ata.datagen.LanguageType;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -53,9 +53,6 @@ public class ExtrasLanguageProvider extends FabricLanguageProvider {
      * @param itemGroup   The item group to add the translation for.
      * @param translation The translation.
      */
-    public void addTranslation(OwoItemGroup itemGroup, String translation) {
-        translations.put(getTranslationKeyForOwoItemGroup(itemGroup), translation);
-    }
 
     /**
      * Adds a translation to the language file.
@@ -84,8 +81,6 @@ public class ExtrasLanguageProvider extends FabricLanguageProvider {
      * @return The translation key for the item group
      */
 
-    private String getTranslationKeyForOwoItemGroup(OwoItemGroup itemGroup) {
-        return "itemGroup." + itemGroup.id().getNamespace() + "." + itemGroup.id().getPath();
-    }
+
 
 }

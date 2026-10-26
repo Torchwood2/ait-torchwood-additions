@@ -1,7 +1,7 @@
 package uk.jacobempire.ata.datagen;
 
 import uk.jacobempire.ata.ATA;
-import uk.jacobempire.ata.blocks.ExtrasBlocks;
+//import uk.jacobempire.ata.blocks.ExtrasBlocks;
 import uk.jacobempire.ata.datagen.datagen_providers.ExtrasLanguageProvider;
 import uk.jacobempire.ata.datagen.datagen_providers.ExtrasModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -43,11 +43,11 @@ public class ExtrasDataGenerator implements DataGeneratorEntrypoint {
     public ExtrasLanguageProvider addEnglishTranslations(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture, LanguageType languageType) {
         ExtrasLanguageProvider provider = new ExtrasLanguageProvider(output, languageType);
 
-        provider.addTranslation(ATA.EXTRAS_ITEM_GROUP, "ATA");
+       // provider.addTranslation(ATA.EXTRAS_ITEM_GROUP, "ATA");
 
-        provider.addTranslation(ExtrasBlocks.HARTNELL_A, "Hartnell A");
-        provider.addTranslation(ExtrasBlocks.HARTNELL_B, "Hartnell B");
-        provider.addTranslation(ExtrasBlocks.HARTNELL_C, "Hartnell C");
+      //  provider.addTranslation(ExtrasBlocks.HARTNELL_A, "Hartnell A");
+       // provider.addTranslation(ExtrasBlocks.HARTNELL_B, "Hartnell B");
+      //  provider.addTranslation(ExtrasBlocks.HARTNELL_C, "Hartnell C");
 
         return provider;
     }
@@ -56,9 +56,9 @@ public class ExtrasDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(((output, registriesFuture) -> {
             ExtrasModelProvider provider = new ExtrasModelProvider(output);
 
-            provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_A);
-            provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_B);
-            provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_C);
+          //  provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_A);
+           // provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_B);
+          //  provider.registerSimpleBlock(ExtrasBlocks.HARTNELL_C);
 
             return provider;
         }));
