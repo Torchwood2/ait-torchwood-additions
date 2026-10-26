@@ -1,10 +1,14 @@
 plugins {
-    id 'fabric-loom' version '1.0-SNAPSHOT'
+    id 'fabric-loom' version "${loom_version}"
     id 'maven-publish'
 }
 
 version = project.mod_version
 group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
 
 repositories {
     maven {
@@ -15,25 +19,43 @@ repositories {
     }
 
     maven {
+        url = "https://maven.isxander.dev/releases"
+    }
+
+    // Scheduler, Queue, MultiDim and AutoJSON
+    maven {
         url = "https://theo.is-a.dev/maven/"
-        content {
-            includeGroup "dev.drtheo"
-        }
     }
 
     maven {
-        name = "Modrinth"
-        url = "https://api.modrinth.com/maven"
+        url = "https://maven.shedaniel.me/"
     }
 
     maven {
-        name = "Ladysnake Mods"
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+
+    maven {
+        name = "Ladysnake Libs"
         url = "https://maven.ladysnake.org/releases"
     }
 
-    maven {
-        name = "Quilt"
-        url = "https://maven.quiltmc.org/repository/release/"
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+fabricApi {
+    configureDataGeneration {
+        client = true
     }
 }
 
@@ -41,70 +63,119 @@ dependencies {
     // Minecraft
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-
-    // Fabric Loader
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // Adventures in Time
-    modImplementation "maven.modrinth:ait:${project.ait_version}"
+    // exp4j
+    include(implementation("net.objecthunter:exp4j:0.4.8"))
 
-    // AIT dependencies
-    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
+    // Fabric API
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Gson
+    implementation "com.google.code.gson:gson:2.8.9"
+
+    // Gravity Changer
+    modCompileOnlyApi("com.github.qouteall:GravityChanger:${project.gravity_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
     // YetAnotherConfigLib
-    modImplementation "maven.modrinth:yacl:${project.yacl_version}"
+    modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    // Quilt Parsers: provides the missing GsonWriter class
-    modImplementation "org.quiltmc.parsers:gson:0.2.1"
-    include "org.quiltmc.parsers:gson:0.2.1"
+    // Mod Menu
+    modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
 
-    // Fabric API
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    // K9
+    modCompileOnlyApi "maven.modrinth:k9-mod:${project.k9_version}"
+
+    // MultiDim
+    include(modImplementation("dev.drtheo:multidim:${project.multidim_version}")) {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    // Scheduler
+    include(modImplementation("dev.drtheo:scheduler:${project.scheduler_version}")) {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    // Queue
+    include(modImplementation("dev.drtheo:queue:${project.queue_version}")) {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    // AmbleKit
+    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    // Adventures in Time
+    modImplementation "maven.modrinth:ait:${project.ait_version}"
+
+    // Cardinal Components API
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+
+    include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+    include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
 }
 
 processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
+    inputs.property "amblekit_version", project.amblekit_version
+    inputs.property "yacl_version", project.yacl_version
 
-    filteringCharset "UTF-8"
+    filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand(
                 "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version
+                "loader_version": project.loader_version,
+                "amblekit_version": project.amblekit_version,
+                "yacl_version": project.yacl_version
         )
     }
 }
 
-def targetJavaVersion = 17
-
 tasks.withType(JavaCompile).configureEach {
+    options.release = 17
     options.encoding = "UTF-8"
-
-    if (targetJavaVersion >= 10 ||
-            JavaVersion.current().isJava10Compatible()) {
-        options.release = targetJavaVersion
-    }
 }
 
 java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion =
-                JavaLanguageVersion.of(targetJavaVersion)
-    }
-
-    archivesBaseName = project.archives_base_name
-
     withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.named('sourcesJar', Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 jar {
+    inputs.property "archivesName", project.base.archivesName
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "amblekit_version", project.amblekit_version
+    inputs.property "yacl_version", project.yacl_version
+
+    filesMatching("fabric.mod.json") {
+        expand(
+                "version": project.version,
+                "minecraft_version": project.minecraft_version,
+                "loader_version": project.loader_version,
+                "amblekit_version": project.amblekit_version,
+                "yacl_version": project.yacl_version
+        )
+    }
+
     from("LICENSE") {
         rename {
             "${it}_${project.archives_base_name}"
@@ -114,37 +185,13 @@ jar {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        create("mavenJava", MavenPublication) {
+            artifactId = project.archives_base_name
             from components.java
         }
     }
 
     repositories {
         // Configure publishing repositories here if needed.
-    }
-}
-
-sourceSets {
-    main {
-        resources {
-            srcDirs += [
-                    'src/main/generated'
-            ]
-        }
-    }
-}
-
-loom {
-    runs {
-        datagen {
-            inherit server
-            name "Data Generation"
-
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file('src/main/generated')}"
-            vmArg "-Dfabric-api.datagen.modid=${project.modid}"
-
-            runDir "build/datagen"
-        }
     }
 }
