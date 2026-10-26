@@ -12,7 +12,14 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
-    maven { url 'https://jitpack.io' }
+    maven {
+        url "https://maven.amblelabs.dev"
+        content { includeGroup "dev.amblelabs" }
+    }
+    maven {
+        url 'https://jitpack.io'
+        metadataSources { artifact() }
+    }
     maven {
         name = "Modrinth"
         url "https://api.modrinth.com/maven"
@@ -34,7 +41,9 @@ dependencies {
 
     // AIT dependencies, copied to here
     modImplementation "io.wispforest:owo-lib:${project.owo_version}"
-    modImplementation "maven.modrinth:amblekit:${project.amblekit_version}"
+    modImplementation("dev.amblelabs:modkit:${project.amblekit_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
     modImplementation "maven.modrinth:yacl:${project.yacl_version}"
     modImplementation "maven.modrinth:trinkets:${project.trinkets_version}"
 

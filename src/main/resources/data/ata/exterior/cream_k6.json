@@ -1,7 +1,7 @@
 {
-    "id": "awt:creamk6booth",
+    "id": "ata:creamk6booth",
     "category": "ait:exterior/booth",
     "parent": "ait:exterior/booth/default",
-    "texture": "awt:textures/exterior/cream_k6.png",
-    "emission": "awt:textures/exterior/cream_k6_emission.png"
+    "texture": "ata:textures/exterior/cream_k6.png",
+    "emission": "ata:textures/exterior/cream_k6_emission.png"
   }

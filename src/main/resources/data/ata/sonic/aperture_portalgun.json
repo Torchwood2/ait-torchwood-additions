@@ -1,11 +1,11 @@
 {
-  "id": "awt:aperture_portalgun",
+  "id": "ata:aperture_portalgun",
   "models": {
-    "inactive": "awt:item/sonic/aperture_portalgun_inactive",
-    "interaction": "awt:item/sonic/aperture_portalgun_interaction",
-    "overload": "awt:item/sonic/aperture_portalgun_overload",
-    "scanning": "awt:item/sonic/aperture_portalgun_scanning",
-    "tardis": "awt:item/sonic/aperture_portalgun_tardis"
+    "inactive": "ata:item/sonic/aperture_portalgun_inactive",
+    "interaction": "ata:item/sonic/aperture_portalgun_interaction",
+    "overload": "ata:item/sonic/aperture_portalgun_overload",
+    "scanning": "ata:item/sonic/aperture_portalgun_scanning",
+    "tardis": "ata:item/sonic/aperture_portalgun_tardis"
   },
   "loyalty": {
     "type": "OWNER"

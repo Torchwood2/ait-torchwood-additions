@@ -1,11 +1,11 @@
 {
-  "id": "awt:classic_war_sonic",
+  "id": "ata:classic_war_sonic",
   "models": {
-    "inactive": "awt:item/sonic/classic_war",
-    "interaction": "awt:item/sonic/classic_war_interaction",
-    "overload": "awt:item/sonic/classic_war_overload",
-    "scanning": "awt:item/sonic/classic_war_scanning",
-    "tardis": "awt:item/sonic/classic_war_tardis"
+    "inactive": "ata:item/sonic/classic_war",
+    "interaction": "ata:item/sonic/classic_war_interaction",
+    "overload": "ata:item/sonic/classic_war_overload",
+    "scanning": "ata:item/sonic/classic_war_scanning",
+    "tardis": "ata:item/sonic/classic_war_tardis"
   },
   "loyalty": {
     "type": "OWNER"

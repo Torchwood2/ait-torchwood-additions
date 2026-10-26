@@ -1,11 +1,11 @@
 {
-  "id": "awt:blunt",
+  "id": "ata:blunt",
   "models": {
-    "inactive": "awt:item/sonic/blunt",
-    "interaction": "awt:item/sonic/blunt_interaction",
-    "overload": "awt:item/sonic/blunt_overload",
-    "scanning": "awt:item/sonic/blunt_scanning",
-    "tardis": "awt:item/sonic/blunt_tardis"
+    "inactive": "ata:item/sonic/blunt",
+    "interaction": "ata:item/sonic/blunt_interaction",
+    "overload": "ata:item/sonic/blunt_overload",
+    "scanning": "ata:item/sonic/blunt_scanning",
+    "tardis": "ata:item/sonic/blunt_tardis"
   },
   "loyalty": {
     "type": "OWNER"

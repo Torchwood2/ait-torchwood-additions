@@ -1,9 +1,9 @@
 {
-    "id": "awt:glasgow",
+    "id": "ata:glasgow",
     "category": "ait:exterior/police_box",
     "parent": "ait:exterior/police_box/default",
-    "texture": "awt:textures/exterior/glasglow.png",
-    "emission": "awt:textures/exterior/glasglow_emission.png",
+    "texture": "ata:textures/exterior/glasglow.png",
+    "emission": "ata:textures/exterior/glasglow_emission.png",
     "overrides": {
         "snowy": "ait:textures/blockentities/exteriors/police_box/biome/police_box_snowy.png",
         "sculk": "ait:textures/blockentities/exteriors/police_box/biome/police_box_sculk.png",

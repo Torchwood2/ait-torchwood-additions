@@ -1,11 +1,11 @@
 {
-  "id": "awt:classic_mcgann_sonic",
+  "id": "ata:classic_mcgann_sonic",
   "models": {
-    "inactive": "awt:item/sonic/classic_mcgann",
-    "interaction": "awt:item/sonic/classic_mcgann_sonic_interaction",
-    "overload": "awt:item/sonic/classic_mcgann_sonic_overload",
-    "scanning": "awt:item/sonic/classic_mcgann_sonic_scanning",
-    "tardis": "awt:item/sonic/classic_mcgann_sonic_tardis"
+    "inactive": "ata:item/sonic/classic_mcgann",
+    "interaction": "ata:item/sonic/classic_mcgann_sonic_interaction",
+    "overload": "ata:item/sonic/classic_mcgann_sonic_overload",
+    "scanning": "ata:item/sonic/classic_mcgann_sonic_scanning",
+    "tardis": "ata:item/sonic/classic_mcgann_sonic_tardis"
   },
   "loyalty": {
     "type": "OWNER"

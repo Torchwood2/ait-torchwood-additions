@@ -1,11 +1,11 @@
 {
-  "id": "awt:classic_davison_sonic",
+  "id": "ata:classic_davison_sonic",
   "models": {
-    "inactive": "awt:item/sonic/classic_davison",
-    "interaction": "awt:item/sonic/classic_davison_sonic_interaction",
-    "overload": "awt:item/sonic/classic_davison_sonic_overload",
-    "scanning": "awt:item/sonic/classic_davison_sonic_scanning",
-    "tardis": "awt:item/sonic/classic_davison_sonic_tardis"
+    "inactive": "ata:item/sonic/classic_davison",
+    "interaction": "ata:item/sonic/classic_davison_sonic_interaction",
+    "overload": "ata:item/sonic/classic_davison_sonic_overload",
+    "scanning": "ata:item/sonic/classic_davison_sonic_scanning",
+    "tardis": "ata:item/sonic/classic_davison_sonic_tardis"
   },
   "loyalty": {
     "type": "OWNER"

@@ -1,7 +1,7 @@
 {
-    "id": "awt:bee_k6",
+    "id": "ata:bee_k6",
     "category": "ait:exterior/booth",
     "parent": "ait:exterior/booth/default",
-    "texture": "awt:textures/exterior/bee_k6.png",
-    "emission": "awt:textures/exterior/bee_k6_emission.png"
+    "texture": "ata:textures/exterior/bee_k6.png",
+    "emission": "ata:textures/exterior/bee_k6_emission.png"
   }

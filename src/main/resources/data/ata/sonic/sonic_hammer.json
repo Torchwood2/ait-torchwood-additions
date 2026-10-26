@@ -1,11 +1,11 @@
 {
-  "id": "awt:sonic_hammer",
+  "id": "ata:sonic_hammer",
   "models": {
-    "inactive": "awt:item/sonic/sonic_hammer_inactive",
-    "interaction": "awt:item/sonic/sonic_hammer_interaction",
-    "overload": "awt:item/sonic/sonic_hammer_overload",
-    "scanning": "awt:item/sonic/sonic_hammer_scanning",
-    "tardis": "awt:item/sonic/sonic_hammer_tardis"
+    "inactive": "ata:item/sonic/sonic_hammer_inactive",
+    "interaction": "ata:item/sonic/sonic_hammer_interaction",
+    "overload": "ata:item/sonic/sonic_hammer_overload",
+    "scanning": "ata:item/sonic/sonic_hammer_scanning",
+    "tardis": "ata:item/sonic/sonic_hammer_tardis"
   },
   "loyalty": {
     "type": "OWNER"
