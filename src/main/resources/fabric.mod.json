@@ -1,31 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "ait-extras",
+  "id": "ata",
   "version": "${version}",
-  "name": "ait-extras",
-  "description": "",
+  "name": "ATA",
+  "description": "An Adventures in Time addon adding sonics, interiors, desktops, exteriors and decorative blocks.",
   "authors": [],
   "contact": {
-    "repo": "https://github.com/james/ait-extras"
+    "repo": "https://github.com/james/ata"
   },
   "license": "Apache-2.0",
-  "icon": "assets/ait-extras/icon.png",
+  "icon": "assets/ata/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "mc.mdteam.extras.client.AITExtrasClient"
+      "uk.jacobempire.ata.client.ATAClient"
     ],
     "main": [
-      "mc.mdteam.extras.AITExtras"
+      "uk.jacobempire.ata.ATA"
     ],
     "fabric-datagen": [
-      "mc.mdteam.extras.datagen.ExtrasDataGenerator"
+      "uk.jacobempire.ata.datagen.ExtrasDataGenerator"
     ]
   },
   "mixins": [
-    "ait-extras.mixins.json"
+    "ata.mixins.json"
   ],
   "depends": {
+    "ait": "*",
+    "amblekit": "*",
+    "yacl": "*",
+    "trinkets": "*",
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}"

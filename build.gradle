@@ -34,6 +34,9 @@ dependencies {
 
     // AIT dependencies, copied to here
     modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+    modImplementation "maven.modrinth:amblekit:${project.amblekit_version}"
+    modImplementation "maven.modrinth:yacl:${project.yacl_version}"
+    modImplementation "maven.modrinth:trinkets:${project.trinkets_version}"
 
     annotationProcessor "io.wispforest:owo-lib:${project.owo_version}"
 
