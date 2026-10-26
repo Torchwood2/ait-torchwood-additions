@@ -28,8 +28,7 @@
   "depends": {
     "ait": "*",
     "amblekit": "*",
-    "yacl": "*",
-    "trinkets": "*",
+    "yet_another_config_lib_v3": "*",
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}"
