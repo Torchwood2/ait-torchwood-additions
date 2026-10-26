@@ -1,0 +1,7 @@
+{
+  "id": "ata:police_box_zen",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/police_box_zen.png",
+  "emission": "ata:textures/exterior/police_box_zen_emission.png"
+}

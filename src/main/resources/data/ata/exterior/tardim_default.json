@@ -1,0 +1,7 @@
+{
+  "id": "ata:tardimog",
+  "category": "ait:exterior/tardim",
+  "parent": "ait:exterior/tardim/default",
+  "texture": "ata:textures/exterior/tardim_default.png",
+  "emission": "ata:textures/exterior/tardim_default_emission.png"
+}

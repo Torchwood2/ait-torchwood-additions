@@ -1,0 +1,6 @@
+{
+  "id": "ata:burnt_capsule_default",
+  "category": "ait:exterior/capsule",
+  "parent": "ait:exterior/capsule/default",
+  "texture": "ata:textures/exterior/burnt_capsule_default.png"
+}

@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "awt:item/sonic_tools/classic_davison"
+		"1": "ata:item/sonic_tools/classic_davison"
 	},
 	"elements": [
 		{

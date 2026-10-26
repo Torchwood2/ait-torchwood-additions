@@ -1,0 +1,7 @@
+{
+  "id": "ata:purple_box",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/purple_box.png",
+  "emission": "ata:textures/exterior/purple_box_emission.png"
+}

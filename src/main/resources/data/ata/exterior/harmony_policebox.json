@@ -1,0 +1,7 @@
+{
+  "id": "ata:harmony_policebox",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/harmony_policebox.png",
+  "emission": "ata:textures/exterior/harmony_policebox_emission.png"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "ata:inverted_police",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/inverted_police.png"
+}

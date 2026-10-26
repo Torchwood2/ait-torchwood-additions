@@ -2,8 +2,8 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "awt:item/sonic_tools/classic_baker",
-		"particle": "awt:item/sonic_tools/classic_baker"
+		"0": "ata:item/sonic_tools/classic_baker",
+		"particle": "ata:item/sonic_tools/classic_baker"
 	},
 	"elements": [
 		{

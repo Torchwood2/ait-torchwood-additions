@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "awt:item/sonic_tools/hedgehog_movie_tardis"
+		"1": "ata:item/sonic_tools/hedgehog_movie_tardis"
 	},
 	"elements": [
 		{

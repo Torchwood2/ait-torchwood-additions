@@ -19,7 +19,7 @@ repositories {
         metadataSources { artifact() }
     }
     maven {
-        url "https://theo.is-a.dev/maven-repo/"
+        url "https://theo.is-a.dev/maven/"
         content { includeGroup "dev.drtheo" }
     }
     maven {

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "awt:item/sonic_tools/classic_mcgann",
-		"particle": "awt:item/sonic_tools/classic_mcgann"
+		"0": "ata:item/sonic_tools/classic_mcgann",
+		"particle": "ata:item/sonic_tools/classic_mcgann"
 	},
 	"elements": [
 		{

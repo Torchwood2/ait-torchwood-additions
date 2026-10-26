@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "awt:item/sonic_tools/ashpd_interaction",
-		"particle": "awt:item/sonic_tools/ashpd_interaction"
+		"0": "ata:item/sonic_tools/ashpd_interaction",
+		"particle": "ata:item/sonic_tools/ashpd_interaction"
 	},
 	"elements": [
 		{

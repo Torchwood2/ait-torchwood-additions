@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "awt:item/sonic_tools/hammer_scanning",
-		"particle": "awt:item/sonic_tools/hammer_scanning"
+		"0": "ata:item/sonic_tools/hammer_scanning",
+		"particle": "ata:item/sonic_tools/hammer_scanning"
 	},
 	"elements": [
 		{

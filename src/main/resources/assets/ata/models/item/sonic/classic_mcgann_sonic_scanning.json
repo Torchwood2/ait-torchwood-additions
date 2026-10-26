@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "awt:item/sonic_tools/classic_mcgann"
+		"2": "ata:item/sonic_tools/classic_mcgann"
 	},
 	"elements": [
 		{

@@ -1,0 +1,6 @@
+{
+  "id": "ata:police_box_overgrown",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/police_box_overgrown.png"
+}

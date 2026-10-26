@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "awt:item/sonic_tools/hedgehog_super2_overload",
-		"particle": "awt:item/sonic_tools/hedgehog_super2_overload"
+		"0": "ata:item/sonic_tools/hedgehog_super2_overload",
+		"particle": "ata:item/sonic_tools/hedgehog_super2_overload"
 	},
 	"elements": [
 		{

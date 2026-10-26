@@ -1,0 +1,7 @@
+{
+  "id": "ata:do7",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/do7.png",
+  "emission": "ata:textures/exterior/do7_emission.png"
+}
