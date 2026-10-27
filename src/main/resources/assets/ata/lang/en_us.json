@@ -289,5 +289,7 @@
   "exterior.ata.light_blue": "Light Blue",
   "exterior.ata.onion": "Onion",
   "animation.ata.onion_takeoff": "Onion Takeoff",
-  "animation.ata.onion_landing": "Onion Landing"
+  "animation.ata.onion_landing": "Onion Landing",
+  "exterior.ata.k2_phone_booth": "K2 Phone Booth",
+  "exterior.ata.k6_phone_booth": "K6 Phone Booth"
 }

@@ -31,6 +31,12 @@ public final class AwtClient {
     /** For shapes with nothing that glows. */
     private static final Identifier NO_EMISSION = ATA.id("textures/exterior/awt/no_emission.png");
 
+    /** Phone booth doors open outwards. */
+    private static final AwtShapeRender PHONE_BOOTH = new AwtShapeRender(
+            AwtModels::phoneBooth, List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "root", "door")),
+            AwtModels::phoneBoothDoor, List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "root", "door")),
+            1.0f, List.of());
+
     private static final Map<Shape, AwtShapeRender> RENDER = Map.of(
             // Police box doors open inwards, like the TARDIS's: the +x-hinged door is the one that opens first.
             AwtExteriors.POLICE_BOX, new AwtShapeRender(
@@ -40,7 +46,9 @@ public final class AwtClient {
                     AwtModels::policeBoxDoor, List.of(
                             DoorPart.swing(true, Motion.SWING_POSITIVE, "bone", "front", "doors", "leftdoor"),
                             DoorPart.swing(false, Motion.SWING_NEGATIVE, "bone", "front", "doors", "rightdoor")),
-                    1.0f, List.of()));
+                    1.0f, List.of()),
+            AwtExteriors.K2_PHONE_BOOTH, PHONE_BOOTH,
+            AwtExteriors.K6_PHONE_BOOTH, PHONE_BOOTH);
 
     private AwtClient() {
     }

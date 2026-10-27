@@ -56,6 +56,13 @@ public final class AwtExteriors {
     public static final Shape POLICE_BOX = new Shape("awt_police_box",
             List.of("default", "alt", "alt2", "badwolf", "coral", "dino", "gamblebox", "nathan", "purple", "rhamnous", "tokomak"),
             true, DoorSound.POLICE_BOX, 0.70, 1.3, 2.2);
+    /** Deo's red phone booths: the K2 and the K6 share one model, with their own paint jobs. */
+    public static final Shape K2_PHONE_BOOTH = new Shape("k2_phone_booth",
+            List.of("default", "battered", "blue", "futuristic", "gloom", "grey", "pink"),
+            false, DoorSound.DEFAULT, 0.64, 0.94, 2.35);
+    public static final Shape K6_PHONE_BOOTH = new Shape("k6_phone_booth",
+            List.of("default", "battered", "bee", "futuristic", "gloom"),
+            false, DoorSound.DEFAULT, 0.64, 0.94, 2.35);
     /**
      * The Onion: a single "door" that is its beam (shown while open), which bloops open and shut. It always
      * travels with its own takeoff and landing animations (see OnionTravel).
@@ -64,7 +71,7 @@ public final class AwtExteriors {
             List.of("red", "blue", "yellow", "purple", "pink", "lime", "grey", "white", "light_blue"),
             false, DoorSound.BLOOP, 0, 0, 0);
 
-    public static final List<Shape> SHAPES = List.of(POLICE_BOX, ONION);
+    public static final List<Shape> SHAPES = List.of(POLICE_BOX, K2_PHONE_BOOTH, K6_PHONE_BOOTH, ONION);
 
     private AwtExteriors() {
     }
