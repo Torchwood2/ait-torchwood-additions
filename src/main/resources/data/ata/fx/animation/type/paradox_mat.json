@@ -1,0 +1,6 @@
+{
+  "id": "ata:paradox_mat",
+  "expected_state": "mat",
+  "sound": "ata:tardis/paradox_mat",
+  "blockbench_file": "ait:pulsating_mat"
+}

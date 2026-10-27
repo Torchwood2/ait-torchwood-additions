@@ -1,0 +1,6 @@
+{
+  "id": "ata:type70_mat",
+  "expected_state": "mat",
+  "sound": "ata:tardis/type70_mat",
+  "blockbench_file": "ait:pulsating_mat"
+}

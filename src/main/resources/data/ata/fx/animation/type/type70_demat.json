@@ -1,0 +1,6 @@
+{
+  "id": "ata:type70_demat",
+  "expected_state": "demat",
+  "sound": "ata:tardis/type70_demat",
+  "blockbench_file": "ait:pulsating_demat"
+}

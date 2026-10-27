@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ata:block/roundel/stripped_spruce_log_roundel"
+  }
+}

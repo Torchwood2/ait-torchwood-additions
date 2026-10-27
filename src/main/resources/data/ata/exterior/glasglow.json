@@ -1,5 +1,5 @@
 {
-  "id": "ata:glasgow",
+  "id": "ata:glasglow",
   "category": "ait:exterior/police_box",
   "parent": "ait:exterior/police_box/default",
   "texture": "ata:textures/exterior/glasglow.png",

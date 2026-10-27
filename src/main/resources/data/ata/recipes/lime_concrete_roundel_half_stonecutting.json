@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:lime_concrete"
+  },
+  "result": "ata:lime_concrete_roundel_half",
+  "count": 1
+}

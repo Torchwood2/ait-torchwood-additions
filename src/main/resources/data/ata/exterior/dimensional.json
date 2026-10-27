@@ -1,0 +1,7 @@
+{
+  "id": "ata:dimensional",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/dimensional.png",
+  "emission": "ata:textures/exterior/dimensional_emission.png"
+}

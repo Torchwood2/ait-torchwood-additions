@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:hartnell_roundel"
+  },
+  "result": "ata:hartnell_wall",
+  "count": 1
+}

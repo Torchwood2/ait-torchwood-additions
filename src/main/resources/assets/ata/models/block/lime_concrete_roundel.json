@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ata:block/roundel/lime_concrete_roundel"
+  }
+}

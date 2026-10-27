@@ -1,0 +1,74 @@
+{
+  "tardis/type70_demat": {
+    "subtitle": "subtitles.ata.tardis.type70_demat",
+    "sounds": [
+      {
+        "name": "ata:type70demat",
+        "stream": false
+      }
+    ]
+  },
+  "tardis/type70_mat": {
+    "subtitle": "subtitles.ata.tardis.type70_mat",
+    "sounds": [
+      {
+        "name": "ata:type70mat",
+        "stream": false
+      }
+    ]
+  },
+  "tardis/type70_flight": {
+    "subtitle": "subtitles.ata.tardis.type70_flight",
+    "sounds": [
+      {
+        "name": "ata:type70flight",
+        "stream": true
+      }
+    ]
+  },
+  "tardis/paradox_mat": {
+    "subtitle": "subtitles.ata.tardis.paradox_mat",
+    "sounds": [
+      {
+        "name": "ata:paradoxmat",
+        "stream": false
+      }
+    ]
+  },
+  "tardis/emergency_land": {
+    "subtitle": "subtitles.ata.tardis.emergency_land",
+    "sounds": [
+      {
+        "name": "ata:emergency_land",
+        "stream": false
+      }
+    ]
+  },
+  "tardis/police_box_door_open": {
+    "subtitle": "subtitles.ata.tardis.police_box_door_open",
+    "sounds": [
+      {
+        "name": "ata:police_box_door_open",
+        "stream": false
+      }
+    ]
+  },
+  "tardis/police_box_door_close": {
+    "subtitle": "subtitles.ata.tardis.police_box_door_close",
+    "sounds": [
+      {
+        "name": "ata:police_box_door_close",
+        "stream": false
+      }
+    ]
+  },
+  "bloop": {
+    "subtitle": "subtitles.ata.bloop",
+    "sounds": [
+      {
+        "name": "ata:bloop",
+        "stream": false
+      }
+    ]
+  }
+}

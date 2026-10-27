@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:polished_diorite"
+  },
+  "result": "ata:polished_diorite_roundel",
+  "count": 1
+}

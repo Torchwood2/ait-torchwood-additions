@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GG",
+    "GG"
+  ],
+  "key": {
+    "G": {
+      "item": "ata:grate_block"
+    }
+  },
+  "result": {
+    "item": "ata:thick_grate_block",
+    "count": 2
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ata:block/roundel/polished_granite_roundel_full"
+  }
+}

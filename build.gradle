@@ -11,35 +11,27 @@ base {
 }
 
 repositories {
+    // AmbleKit (AIT's library)
     maven {
         url = "https://jitpack.io"
         metadataSources {
             artifact()
         }
+        content {
+            includeGroup "com.github.amblelabs"
+        }
     }
 
+    // YetAnotherConfigLib
     maven {
         url = "https://maven.isxander.dev/releases"
+        content {
+            includeGroup "dev.isxander"
+            includeGroup "org.quiltmc.parsers"
+        }
     }
 
-    // Scheduler, Queue, MultiDim and AutoJSON
-    maven {
-        url = "https://theo.is-a.dev/maven/"
-    }
-
-    maven {
-        url = "https://maven.shedaniel.me/"
-    }
-
-    maven {
-        url = "https://maven.terraformersmc.com/releases/"
-    }
-
-    maven {
-        name = "Ladysnake Libs"
-        url = "https://maven.ladysnake.org/releases"
-    }
-
+    // Adventures in Time and Moonlight Lib
     exclusiveContent {
         forRepository {
             maven {
@@ -51,11 +43,18 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
-}
 
-fabricApi {
-    configureDataGeneration {
-        client = true
+    // Supplementaries and Copper & Tuff Backport
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "CurseMaven"
+                url = "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
     }
 }
 
@@ -65,85 +64,43 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    // exp4j
-    include(implementation("net.objecthunter:exp4j:0.4.8"))
-
     // Fabric API
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-    // Gson
-    implementation "com.google.code.gson:gson:2.8.9"
-
-    // Gravity Changer
-    modCompileOnlyApi("com.github.qouteall:GravityChanger:${project.gravity_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    // YetAnotherConfigLib
-    modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
-
-    // Mod Menu
-    modApi("com.terraformersmc:modmenu:${project.modmenu_version}")
-
-    // K9
-    modCompileOnlyApi "maven.modrinth:k9-mod:${project.k9_version}"
-
-    // MultiDim
-    include(modImplementation("dev.drtheo:multidim:${project.multidim_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    // Scheduler
-    include(modImplementation("dev.drtheo:scheduler:${project.scheduler_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    // Queue
-    include(modImplementation("dev.drtheo:queue:${project.queue_version}")) {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
-
-    // AmbleKit
-    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
-        exclude(group: "net.fabricmc.fabric-api")
-    }
 
     // Adventures in Time
     modImplementation "maven.modrinth:ait:${project.ait_version}"
 
-    // Cardinal Components API
-    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
-    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+    // AIT's own dependencies. AmbleKit carries MultiDim, Scheduler, Queue, Animator and exp4j inside it.
+    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 
-    include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
-    include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+    // Supplementaries (needs Moonlight Lib)
+    modImplementation "curse.maven:supplementaries-412082:${project.supplementaries_file}"
+    modImplementation "maven.modrinth:moonlight:${project.moonlight_version}"
+
+    // Copper & Tuff Backport
+    modImplementation "curse.maven:copper-tuff-backport-fabric-950738:${project.copper_tuff_file}"
 }
 
 processResources {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
-    inputs.property "amblekit_version", project.amblekit_version
-    inputs.property "yacl_version", project.yacl_version
-
-    filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand(
                 "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version,
-                "amblekit_version": project.amblekit_version,
-                "yacl_version": project.yacl_version
+                "loader_version": project.loader_version
         )
     }
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.release = 17
-    options.encoding = "UTF-8"
+    it.options.release = 17
+    it.options.encoding = "UTF-8"
 }
 
 java {
@@ -152,34 +109,11 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-tasks.named('sourcesJar', Jar) {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
 jar {
     inputs.property "archivesName", project.base.archivesName
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-
-    inputs.property "version", project.version
-    inputs.property "minecraft_version", project.minecraft_version
-    inputs.property "loader_version", project.loader_version
-    inputs.property "amblekit_version", project.amblekit_version
-    inputs.property "yacl_version", project.yacl_version
-
-    filesMatching("fabric.mod.json") {
-        expand(
-                "version": project.version,
-                "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version,
-                "amblekit_version": project.amblekit_version,
-                "yacl_version": project.yacl_version
-        )
-    }
 
     from("LICENSE") {
-        rename {
-            "${it}_${project.archives_base_name}"
-        }
+        rename { "${it}_${inputs.properties.archivesName}" }
     }
 }
 
@@ -189,9 +123,5 @@ publishing {
             artifactId = project.archives_base_name
             from components.java
         }
-    }
-
-    repositories {
-        // Configure publishing repositories here if needed.
     }
 }

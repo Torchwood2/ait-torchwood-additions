@@ -1,7 +1,7 @@
 {
   "id": "ata:toyardian",
-  "category": "ait:exterior/booth",
-  "parent": "ait:exterior/booth/default",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
   "texture": "ata:textures/exterior/toyardian.png",
   "emission": "ata:textures/exterior/toyardian_emission.png"
 }

@@ -1,7 +1,7 @@
 {
   "id": "ata:toywardianfaded_policebox",
-  "category": "ait:exterior/booth",
-  "parent": "ait:exterior/booth/default",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
   "texture": "ata:textures/exterior/toywardianfaded_policebox.png",
   "emission": "ata:textures/exterior/toywardianfaded_policebox_emission.png"
 }

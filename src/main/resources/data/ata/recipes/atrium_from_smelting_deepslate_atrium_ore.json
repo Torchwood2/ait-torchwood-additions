@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ata:deepslate_atrium_ore"
+  },
+  "result": "ata:atrium",
+  "experience": 1.0,
+  "cookingtime": 200
+}

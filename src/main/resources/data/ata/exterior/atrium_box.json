@@ -1,7 +1,7 @@
 {
   "id": "ata:atrium_box",
-  "category": "ait:exterior/booth",
-  "parent": "ait:exterior/booth/default",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
   "texture": "ata:textures/exterior/atrium_box.png",
   "emission": "ata:textures/exterior/atrium_box_emission.png"
 }

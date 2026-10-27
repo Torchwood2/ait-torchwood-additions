@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ata:block/roundel/yellow_concrete_roundel"
+  }
+}

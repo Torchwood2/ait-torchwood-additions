@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ata:atrium_ore",
+    "ata:deepslate_atrium_ore",
+    "ata:atrium_block"
+  ]
+}

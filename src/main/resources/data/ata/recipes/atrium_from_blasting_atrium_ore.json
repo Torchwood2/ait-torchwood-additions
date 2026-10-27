@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "ata:atrium_ore"
+  },
+  "result": "ata:atrium",
+  "experience": 1.0,
+  "cookingtime": 100
+}

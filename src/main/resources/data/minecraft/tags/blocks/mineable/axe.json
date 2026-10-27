@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ata:stripped_oak_log_roundel",
+    "ata:stripped_oak_log_roundel_half",
+    "ata:stripped_spruce_log_roundel",
+    "ata:stripped_spruce_log_roundel_half",
+    "ata:stripped_birch_log_roundel",
+    "ata:stripped_birch_log_roundel_half",
+    "ata:stripped_jungle_log_roundel",
+    "ata:stripped_jungle_log_roundel_half",
+    "ata:stripped_acacia_log_roundel",
+    "ata:stripped_acacia_log_roundel_half",
+    "ata:stripped_dark_oak_log_roundel",
+    "ata:stripped_dark_oak_log_roundel_half",
+    "ata:stripped_mangrove_log_roundel",
+    "ata:stripped_mangrove_log_roundel_half",
+    "ata:stripped_cherry_log_roundel",
+    "ata:stripped_cherry_log_roundel_half"
+  ]
+}

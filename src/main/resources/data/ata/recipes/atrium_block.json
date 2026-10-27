@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:atrium"
+    }
+  },
+  "result": {
+    "item": "ata:atrium_block"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:moss_block"
+  },
+  "result": "ata:moss_roundel",
+  "count": 1
+}

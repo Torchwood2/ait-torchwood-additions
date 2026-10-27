@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ata:atrium_block"
+    }
+  ],
+  "result": {
+    "item": "ata:atrium",
+    "count": 9
+  }
+}

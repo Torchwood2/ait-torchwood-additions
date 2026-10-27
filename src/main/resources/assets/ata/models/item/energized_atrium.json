@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ata:item/atrium_stuff/energized_atrium"
+  }
+}

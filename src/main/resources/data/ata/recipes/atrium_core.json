@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EFE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "ata:energized_atrium"
+    },
+    "F": {
+      "item": "ata:atrium_fuel"
+    }
+  },
+  "result": {
+    "item": "ata:atrium_core"
+  }
+}

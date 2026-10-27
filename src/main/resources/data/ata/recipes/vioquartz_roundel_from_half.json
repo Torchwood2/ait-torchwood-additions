@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:vioquartz_roundel_half"
+  },
+  "result": "ata:vioquartz_roundel",
+  "count": 1
+}

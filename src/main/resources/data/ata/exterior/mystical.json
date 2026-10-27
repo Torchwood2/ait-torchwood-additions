@@ -1,0 +1,7 @@
+{
+  "id": "ata:mystical",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/mystical.png",
+  "emission": "ata:textures/exterior/mystical_emission.png"
+}
