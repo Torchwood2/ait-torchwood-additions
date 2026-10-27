@@ -50,6 +50,15 @@ public final class ATAExteriorsClient {
                             DoorPart.swing(true, Motion.SWING_POSITIVE, "bone", "front", "doors", "leftdoor"),
                             DoorPart.swing(false, Motion.SWING_NEGATIVE, "bone", "front", "doors", "rightdoor")),
                     1.0f, List.of()),
+            // Drawn at 0.66 to come out the size of AIT's police box; the portal and fade_value planes stay hidden.
+            ATAExteriors.BLUEBERRY_BOX, new ShapeRender(
+                    ATAExteriorModels::blueberryBox, List.of(
+                            DoorPart.swing(true, Motion.SWING_POSITIVE, "parent", "right_door"),
+                            DoorPart.swing(false, Motion.SWING_NEGATIVE, "parent", "left_door")),
+                    ATAExteriorModels::blueberryBoxDoor, List.of(
+                            DoorPart.swing(true, Motion.SWING_POSITIVE, "parent", "right_door"),
+                            DoorPart.swing(false, Motion.SWING_NEGATIVE, "parent", "left_door")),
+                    0.66f, List.of("portal", "fade_value")),
             ATAExteriors.K2_PHONE_BOOTH, PHONE_BOOTH,
             ATAExteriors.K6_PHONE_BOOTH, PHONE_BOOTH);
 

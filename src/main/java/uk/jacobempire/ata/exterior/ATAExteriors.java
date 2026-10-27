@@ -56,6 +56,9 @@ public final class ATAExteriors {
     public static final Shape POLICE_BOX = new Shape("police_box",
             List.of("default", "alt", "alt2", "badwolf", "coral", "dino", "gamblebox", "purple", "rhamnous", "tokomak"),
             true, DoorSound.POLICE_BOX, 0.70, 1.3, 2.2);
+    /** Deo's Blueberry Box: a double-doored police box. */
+    public static final Shape BLUEBERRY_BOX = new Shape("blueberry_box", List.of("default"),
+            true, DoorSound.POLICE_BOX, 0.64, 1.03, 2.15);
     /** Deo's red phone booths: the K2 and the K6 share one model, with their own paint jobs. */
     public static final Shape K2_PHONE_BOOTH = new Shape("k2_phone_booth",
             List.of("default", "battered", "blue", "futuristic", "gloom", "grey", "pink"),
@@ -71,7 +74,7 @@ public final class ATAExteriors {
             List.of("red", "blue", "yellow", "purple", "pink", "lime", "grey", "white", "light_blue"),
             false, DoorSound.BLOOP, 0, 0, 0);
 
-    public static final List<Shape> SHAPES = List.of(POLICE_BOX, K2_PHONE_BOOTH, K6_PHONE_BOOTH, ONION);
+    public static final List<Shape> SHAPES = List.of(POLICE_BOX, BLUEBERRY_BOX, K2_PHONE_BOOTH, K6_PHONE_BOOTH, ONION);
 
     private ATAExteriors() {
     }
