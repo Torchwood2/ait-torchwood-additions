@@ -10,7 +10,7 @@
       "item": "minecraft:redstone"
     },
     "A": {
-      "item": "ata:atrium"
+      "tag": "c:atrium"
     },
     "G": {
       "item": "minecraft:glowstone_dust"

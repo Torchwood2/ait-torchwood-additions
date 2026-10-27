@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ata:atrium",
+    {
+      "id": "gallifrey:atrium",
+      "required": false
+    }
+  ]
+}

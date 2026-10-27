@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_c_baker",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/c_baker",
+    "interaction": "ata:item/sonic/gallifrey/c_baker",
+    "overload": "ata:item/sonic/gallifrey/c_baker",
+    "scanning": "ata:item/sonic/gallifrey/c_baker",
+    "tardis": "ata:item/sonic/gallifrey/c_baker"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

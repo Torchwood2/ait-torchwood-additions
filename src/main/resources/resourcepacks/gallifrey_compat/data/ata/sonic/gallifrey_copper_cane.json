@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_copper_cane",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/copper_cane",
+    "interaction": "ata:item/sonic/gallifrey/copper_cane",
+    "overload": "ata:item/sonic/gallifrey/copper_cane",
+    "scanning": "ata:item/sonic/gallifrey/copper_cane",
+    "tardis": "ata:item/sonic/gallifrey/copper_cane"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

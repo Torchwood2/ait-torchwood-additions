@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ata:atrium"
+      "tag": "c:atrium"
     },
     {
       "item": "minecraft:coal"

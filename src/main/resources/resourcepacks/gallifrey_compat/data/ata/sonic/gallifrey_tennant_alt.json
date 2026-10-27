@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_tennant_alt",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/tennant_alt",
+    "interaction": "ata:item/sonic/gallifrey/tennant_alt",
+    "overload": "ata:item/sonic/gallifrey/tennant_alt",
+    "scanning": "ata:item/sonic/gallifrey/tennant_alt",
+    "tardis": "ata:item/sonic/gallifrey/tennant_alt"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

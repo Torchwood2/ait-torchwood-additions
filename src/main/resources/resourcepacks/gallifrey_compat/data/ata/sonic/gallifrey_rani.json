@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_rani",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/rani",
+    "interaction": "ata:item/sonic/gallifrey/rani",
+    "overload": "ata:item/sonic/gallifrey/rani",
+    "scanning": "ata:item/sonic/gallifrey/rani",
+    "tardis": "ata:item/sonic/gallifrey/rani"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

@@ -20,6 +20,8 @@ public final class ATAWorldGen {
     }
 
     public static void register() {
+        // Gallifrey generates its own atrium ore (which works in ATA's recipes), so don't add a second lot.
+        if (uk.jacobempire.ata.compat.GallifreyCompat.isLoaded()) return;
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, ATRIUM_ORE);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, ATRIUM_ORE_BURIED);
     }

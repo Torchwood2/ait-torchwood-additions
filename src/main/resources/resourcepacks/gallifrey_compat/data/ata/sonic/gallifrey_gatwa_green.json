@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_gatwa_green",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/gatwa_green",
+    "interaction": "ata:item/sonic/gallifrey/gatwa_green",
+    "overload": "ata:item/sonic/gallifrey/gatwa_green",
+    "scanning": "ata:item/sonic/gallifrey/gatwa_green",
+    "tardis": "ata:item/sonic/gallifrey/gatwa_green"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_capaldi",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/capaldi",
+    "interaction": "ata:item/sonic/gallifrey/capaldi",
+    "overload": "ata:item/sonic/gallifrey/capaldi",
+    "scanning": "ata:item/sonic/gallifrey/capaldi",
+    "tardis": "ata:item/sonic/gallifrey/capaldi"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

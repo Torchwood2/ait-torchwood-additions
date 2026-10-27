@@ -7,6 +7,9 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
@@ -17,15 +20,26 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Map;
 
 /**
- * Atrium as TARDIS fuel: use Atrium Fuel, Energized Atrium or an Atrium Core on a console to top up
+ * Atrium as TARDIS fuel: use Atrium Fuel, Energized Atrium or an Atrium Core (ATA's or Gallifrey's) on a console to top up
  * its artron. A TARDIS holds {@value FuelHandler#TARDIS_MAX_FUEL} artron.
  */
 public final class ATAFuel {
-    /** How much artron each item gives. */
-    private static final Map<Item, Double> FUEL = Map.of(
-            ATAItems.ATRIUM_FUEL, 5_000.0,
-            ATAItems.ENERGIZED_ATRIUM, 15_000.0,
-            ATAItems.ATRIUM_CORE, FuelHandler.TARDIS_MAX_FUEL);
+    /** How much artron each item gives. Tags, so Gallifrey's atrium works too. */
+    private static final Map<TagKey<Item>, Double> FUEL = Map.of(
+            tag("atrium_fuels"), 5_000.0,
+            tag("energized_atrium"), 15_000.0,
+            tag("atrium_cores"), FuelHandler.TARDIS_MAX_FUEL);
+
+    private static TagKey<Item> tag(String name) {
+        return TagKey.of(RegistryKeys.ITEM, new Identifier("c", name));
+    }
+
+    private static Double fuelFor(ItemStack stack) {
+        for (Map.Entry<TagKey<Item>, Double> entry : FUEL.entrySet()) {
+            if (stack.isIn(entry.getKey())) return entry.getValue();
+        }
+        return null;
+    }
 
     private ATAFuel() {
     }
@@ -33,7 +47,7 @@ public final class ATAFuel {
     public static void register() {
         UseBlockCallback.EVENT.register((player, world, hand, hit) -> {
             ItemStack stack = player.getStackInHand(hand);
-            Double amount = FUEL.get(stack.getItem());
+            Double amount = fuelFor(stack);
             if (amount == null || player.isSpectator()) return ActionResult.PASS;
             if (!(world.getBlockEntity(hit.getBlockPos()) instanceof ConsoleBlockEntity console)) return ActionResult.PASS;
             if (console.tardis() == null || console.tardis().isEmpty()) return ActionResult.PASS;

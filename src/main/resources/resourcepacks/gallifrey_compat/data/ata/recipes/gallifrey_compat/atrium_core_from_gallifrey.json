@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gallifrey:atrium_core"
+    }
+  ],
+  "result": {
+    "item": "ata:atrium_core"
+  }
+}

@@ -7,10 +7,10 @@
   ],
   "key": {
     "E": {
-      "item": "ata:energized_atrium"
+      "tag": "c:energized_atrium"
     },
     "F": {
-      "item": "ata:atrium_fuel"
+      "tag": "c:atrium_fuels"
     }
   },
   "result": {

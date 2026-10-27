@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_war_master",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/war_master",
+    "interaction": "ata:item/sonic/gallifrey/war_master",
+    "overload": "ata:item/sonic/gallifrey/war_master",
+    "scanning": "ata:item/sonic/gallifrey/war_master",
+    "tardis": "ata:item/sonic/gallifrey/war_master"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

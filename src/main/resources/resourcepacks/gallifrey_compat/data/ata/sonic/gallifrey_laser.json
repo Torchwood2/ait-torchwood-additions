@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_laser",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/laser",
+    "interaction": "ata:item/sonic/gallifrey/laser",
+    "overload": "ata:item/sonic/gallifrey/laser",
+    "scanning": "ata:item/sonic/gallifrey/laser",
+    "tardis": "ata:item/sonic/gallifrey/laser"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

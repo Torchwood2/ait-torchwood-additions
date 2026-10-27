@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_mccoy",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/mccoy",
+    "interaction": "ata:item/sonic/gallifrey/mccoy",
+    "overload": "ata:item/sonic/gallifrey/mccoy",
+    "scanning": "ata:item/sonic/gallifrey/mccoy",
+    "tardis": "ata:item/sonic/gallifrey/mccoy"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

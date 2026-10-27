@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ata:energized_atrium",
+    {
+      "id": "gallifrey:energized_atrium",
+      "required": false
+    }
+  ]
+}

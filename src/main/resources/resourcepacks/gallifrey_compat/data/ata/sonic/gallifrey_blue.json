@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_blue",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/blue",
+    "interaction": "ata:item/sonic/gallifrey/blue",
+    "overload": "ata:item/sonic/gallifrey/blue",
+    "scanning": "ata:item/sonic/gallifrey/blue",
+    "tardis": "ata:item/sonic/gallifrey/blue"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

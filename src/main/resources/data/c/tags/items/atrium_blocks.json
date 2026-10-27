@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ata:atrium_block",
+    {
+      "id": "gallifrey:atrium_block",
+      "required": false
+    }
+  ]
+}

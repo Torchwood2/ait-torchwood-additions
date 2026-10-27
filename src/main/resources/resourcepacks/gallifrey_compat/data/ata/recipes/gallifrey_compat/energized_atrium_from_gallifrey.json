@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gallifrey:energized_atrium"
+    }
+  ],
+  "result": {
+    "item": "ata:energized_atrium"
+  }
+}

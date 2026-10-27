@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_whittaker",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/whittaker",
+    "interaction": "ata:item/sonic/gallifrey/whittaker",
+    "overload": "ata:item/sonic/gallifrey/whittaker",
+    "scanning": "ata:item/sonic/gallifrey/whittaker",
+    "tardis": "ata:item/sonic/gallifrey/whittaker"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

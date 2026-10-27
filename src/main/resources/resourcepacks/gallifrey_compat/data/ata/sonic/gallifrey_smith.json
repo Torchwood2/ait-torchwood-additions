@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_smith",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/smith",
+    "interaction": "ata:item/sonic/gallifrey/smith",
+    "overload": "ata:item/sonic/gallifrey/smith",
+    "scanning": "ata:item/sonic/gallifrey/smith",
+    "tardis": "ata:item/sonic/gallifrey/smith"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

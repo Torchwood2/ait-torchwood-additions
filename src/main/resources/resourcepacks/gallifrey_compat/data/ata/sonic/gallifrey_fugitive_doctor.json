@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_fugitive_doctor",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/fugitive_doctor",
+    "interaction": "ata:item/sonic/gallifrey/fugitive_doctor",
+    "overload": "ata:item/sonic/gallifrey/fugitive_doctor",
+    "scanning": "ata:item/sonic/gallifrey/fugitive_doctor",
+    "tardis": "ata:item/sonic/gallifrey/fugitive_doctor"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

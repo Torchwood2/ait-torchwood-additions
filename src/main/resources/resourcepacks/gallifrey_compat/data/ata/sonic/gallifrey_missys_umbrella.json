@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_missys_umbrella",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/missys_umbrella",
+    "interaction": "ata:item/sonic/gallifrey/missys_umbrella",
+    "overload": "ata:item/sonic/gallifrey/missys_umbrella",
+    "scanning": "ata:item/sonic/gallifrey/missys_umbrella",
+    "tardis": "ata:item/sonic/gallifrey/missys_umbrella"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

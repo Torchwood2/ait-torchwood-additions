@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_blunt",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/blunt",
+    "interaction": "ata:item/sonic/gallifrey/blunt",
+    "overload": "ata:item/sonic/gallifrey/blunt",
+    "scanning": "ata:item/sonic/gallifrey/blunt",
+    "tardis": "ata:item/sonic/gallifrey/blunt"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

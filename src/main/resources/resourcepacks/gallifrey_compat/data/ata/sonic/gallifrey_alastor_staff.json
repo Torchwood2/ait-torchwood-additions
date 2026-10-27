@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_alastor_staff",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/alastor_staff",
+    "interaction": "ata:item/sonic/gallifrey/alastor_staff",
+    "overload": "ata:item/sonic/gallifrey/alastor_staff",
+    "scanning": "ata:item/sonic/gallifrey/alastor_staff",
+    "tardis": "ata:item/sonic/gallifrey/alastor_staff"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_pertwee",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/pertwee",
+    "interaction": "ata:item/sonic/gallifrey/pertwee",
+    "overload": "ata:item/sonic/gallifrey/pertwee",
+    "scanning": "ata:item/sonic/gallifrey/pertwee",
+    "tardis": "ata:item/sonic/gallifrey/pertwee"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

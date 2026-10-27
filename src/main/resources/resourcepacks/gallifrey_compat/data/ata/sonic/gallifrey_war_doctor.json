@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_war_doctor",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/war_doctor",
+    "interaction": "ata:item/sonic/gallifrey/war_doctor",
+    "overload": "ata:item/sonic/gallifrey/war_doctor",
+    "scanning": "ata:item/sonic/gallifrey/war_doctor",
+    "tardis": "ata:item/sonic/gallifrey/war_doctor"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

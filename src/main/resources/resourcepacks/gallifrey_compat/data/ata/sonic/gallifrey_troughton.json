@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_troughton",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/troughton",
+    "interaction": "ata:item/sonic/gallifrey/troughton",
+    "overload": "ata:item/sonic/gallifrey/troughton",
+    "scanning": "ata:item/sonic/gallifrey/troughton",
+    "tardis": "ata:item/sonic/gallifrey/troughton"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}

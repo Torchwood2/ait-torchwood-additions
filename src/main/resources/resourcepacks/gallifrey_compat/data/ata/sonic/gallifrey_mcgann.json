@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_mcgann",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/mcgann",
+    "interaction": "ata:item/sonic/gallifrey/mcgann",
+    "overload": "ata:item/sonic/gallifrey/mcgann",
+    "scanning": "ata:item/sonic/gallifrey/mcgann",
+    "tardis": "ata:item/sonic/gallifrey/mcgann"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}
