@@ -260,7 +260,7 @@
   "block.ata.rusty_thick_grate_trapdoor": "Rusty Thick Grate Trapdoor",
   "message.ata.fuel_added": "+%s artron (%s%% full)",
   "message.ata.fuel_full": "The TARDIS is already full of artron",
-  "exterior.ata.awt_police_box": "Police Box",
+  "exterior.ata.police_box": "Police Box",
   "exterior.ata.default": "Default",
   "exterior.ata.alt": "Alternate",
   "exterior.ata.alt2": "Alternate II",

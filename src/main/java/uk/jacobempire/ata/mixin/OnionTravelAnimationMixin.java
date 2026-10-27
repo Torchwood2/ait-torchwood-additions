@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import uk.jacobempire.ata.awt.OnionTravelAnimations;
+import uk.jacobempire.ata.exterior.OnionTravelAnimations;
 
 /** An Onion always takes off and lands with its own animations, whatever the TARDIS has picked. */
 @Mixin(value = AnimatedTravelHandler.class, remap = false)
