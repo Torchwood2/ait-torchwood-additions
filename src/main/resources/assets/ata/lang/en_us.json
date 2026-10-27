@@ -261,11 +261,6 @@
   "message.ata.fuel_added": "+%s artron (%s%% full)",
   "message.ata.fuel_full": "The TARDIS is already full of artron",
   "exterior.ata.awt_police_box": "Police Box",
-  "exterior.ata.awt_phone_booth": "Phone Booth",
-  "exterior.ata.awt_blueberry_box": "Blueberry Box",
-  "exterior.ata.awt_blocktis": "Blocktis",
-  "exterior.ata.awt_type_70": "Type 70",
-  "exterior.ata.awt_onion": "Onion",
   "exterior.ata.default": "Default",
   "exterior.ata.alt": "Alternate",
   "exterior.ata.alt2": "Alternate II",
@@ -291,5 +286,8 @@
   "exterior.ata.yellow": "Yellow",
   "exterior.ata.lime": "Lime",
   "exterior.ata.white": "White",
-  "exterior.ata.light_blue": "Light Blue"
+  "exterior.ata.light_blue": "Light Blue",
+  "exterior.ata.onion": "Onion",
+  "animation.ata.onion_takeoff": "Onion Takeoff",
+  "animation.ata.onion_landing": "Onion Landing"
 }

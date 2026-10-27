@@ -20,6 +20,7 @@ import uk.jacobempire.ata.client.awt.AwtShapeRender.Motion;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 
 /**
  * Client side of the AWT exteriors: which model each shape uses, how its doors move, and its textures
@@ -39,53 +40,42 @@ public final class AwtClient {
                     AwtModels::policeBoxDoor, List.of(
                             DoorPart.swing(true, Motion.SWING_POSITIVE, "bone", "front", "doors", "leftdoor"),
                             DoorPart.swing(false, Motion.SWING_NEGATIVE, "bone", "front", "doors", "rightdoor")),
-                    1.0f, List.of()),
-            // Phone booth doors open outwards.
-            AwtExteriors.PHONE_BOOTH, AwtShapeRender.of(AwtModels::phoneBooth,
-                    List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "root", "door")), 1.0f),
-            AwtExteriors.BLUEBERRY_BOX, AwtShapeRender.of(AwtModels::blueberryBox, List.of(
-                            DoorPart.swing(true, Motion.SWING_POSITIVE, "parent", "right_door"),
-                            DoorPart.swing(false, Motion.SWING_NEGATIVE, "parent", "left_door")),
-                    0.64f, "portal", "fade_value"),
-            AwtExteriors.BLOCKTIS, AwtShapeRender.of(AwtModels::blocktis,
-                    List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "bone", "door")), 0.5f),
-            // Type 70 doors slide aside rather than swing.
-            AwtExteriors.TYPE_70, new AwtShapeRender(
-                    AwtModels::type70, List.of(DoorPart.slide(15, "bone", "door")),
-                    AwtModels::type70Door, List.of(DoorPart.slide(14, "bone", "door")),
-                    1.0f, List.of()),
-            AwtExteriors.ONION, AwtShapeRender.of(AwtModels::onion, List.of(), 1.0f));
-
-    /** The Blocktis has a second model for its v2 variant. */
-    private static final AwtShapeRender BLOCKTIS_V2 = AwtShapeRender.of(AwtModels::blocktisV2,
-            List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "bone", "door")), 0.5f);
+                    1.0f, List.of()));
 
     private AwtClient() {
     }
 
     public static void register() {
         for (Shape shape : AwtExteriors.SHAPES) {
+            if (shape == AwtExteriors.ONION) {
+                // The Onion has its own models: a beam for a door, and its takeoff and landing animations.
+                ClientDoorRegistry.getInstance().register(new Door(shape, OnionDoorModel::new));
+                for (String variant : shape.variants()) {
+                    ClientExteriorVariantRegistry.getInstance().register(new Variant(shape, variant, OnionExteriorModel::new, false));
+                }
+                continue;
+            }
             AwtShapeRender render = RENDER.get(shape);
-            ClientDoorRegistry.getInstance().register(new Door(shape, render));
+            ClientDoorRegistry.getInstance().register(new Door(shape, () -> new AwtDoorModel(render)));
             for (String variant : shape.variants()) {
-                AwtShapeRender variantRender = shape == AwtExteriors.BLOCKTIS && variant.equals("v2") ? BLOCKTIS_V2 : render;
-                boolean glows = shape != AwtExteriors.ONION;
-                ClientExteriorVariantRegistry.getInstance().register(new Variant(shape, variant, variantRender, glows));
+                ClientExteriorVariantRegistry.getInstance().register(
+                        new Variant(shape, variant, () -> new AwtExteriorModel(render), true));
             }
         }
+        OnionTravel.register();
     }
 
     private static final class Variant extends ClientExteriorVariantSchema {
         private final Shape shape;
         private final String variant;
-        private final AwtShapeRender render;
+        private final Supplier<ExteriorModel> model;
         private final boolean glows;
 
-        Variant(Shape shape, String variant, AwtShapeRender render, boolean glows) {
+        Variant(Shape shape, String variant, Supplier<ExteriorModel> model, boolean glows) {
             super(shape.variantId(variant));
             this.shape = shape;
             this.variant = variant;
-            this.render = render;
+            this.model = model;
             this.glows = glows;
         }
 
@@ -101,7 +91,7 @@ public final class AwtClient {
 
         @Override
         public ExteriorModel model() {
-            return new AwtExteriorModel(render);
+            return model.get();
         }
 
         @Override
@@ -116,16 +106,16 @@ public final class AwtClient {
     }
 
     private static final class Door extends ClientDoorSchema {
-        private final AwtShapeRender render;
+        private final Supplier<AnimatedModel<DoorBlockEntity>> model;
 
-        Door(Shape shape, AwtShapeRender render) {
+        Door(Shape shape, Supplier<AnimatedModel<DoorBlockEntity>> model) {
             super(shape.doorId());
-            this.render = render;
+            this.model = model;
         }
 
         @Override
         public AnimatedModel<DoorBlockEntity> model() {
-            return new AwtDoorModel(render);
+            return model.get();
         }
     }
 }

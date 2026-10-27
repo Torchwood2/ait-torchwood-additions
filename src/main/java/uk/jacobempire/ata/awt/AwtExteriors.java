@@ -32,7 +32,7 @@ public final class AwtExteriors {
      * @param portalWidth  doorway width, in blocks (0 for no portal)
      * @param portalHeight doorway height, in blocks
      */
-    public record Shape(String id, List<String> variants, boolean doubleDoor, boolean policeBoxSounds,
+    public record Shape(String id, List<String> variants, boolean doubleDoor, DoorSound doorSound,
                         double portalDist, double portalWidth, double portalHeight) {
         public Identifier categoryId() {
             return ATA.id("exterior/" + id);
@@ -51,23 +51,20 @@ public final class AwtExteriors {
         }
     }
 
+    public enum DoorSound { DEFAULT, POLICE_BOX, BLOOP }
+
     public static final Shape POLICE_BOX = new Shape("awt_police_box",
             List.of("default", "alt", "alt2", "badwolf", "coral", "dino", "gamblebox", "nathan", "purple", "rhamnous", "tokomak"),
-            true, true, 0.70, 1.3, 2.2);
-    public static final Shape PHONE_BOOTH = new Shape("awt_phone_booth",
-            List.of("default", "battered", "gloom", "futuristic", "bee", "blue", "grey", "pink", "ghost"),
-            false, false, 0.64, 0.94, 2.35);
-    public static final Shape BLUEBERRY_BOX = new Shape("awt_blueberry_box", List.of("default"),
-            true, true, 0.62, 1.0, 2.08);
-    public static final Shape BLOCKTIS = new Shape("awt_blocktis", List.of("default", "v2"),
-            false, false, 0.75, 0.5, 1.0);
-    public static final Shape TYPE_70 = new Shape("awt_type_70", List.of("default", "alt", "war_games"),
-            false, false, 0.5, 0.9, 2.2);
-    public static final Shape ONION = new Shape("awt_onion",
+            true, DoorSound.POLICE_BOX, 0.70, 1.3, 2.2);
+    /**
+     * The Onion: a single "door" that is its beam (shown while open), which bloops open and shut. It always
+     * travels with its own takeoff and landing animations (see OnionTravel).
+     */
+    public static final Shape ONION = new Shape("onion",
             List.of("red", "blue", "yellow", "purple", "pink", "lime", "grey", "white", "light_blue"),
-            false, false, 0, 0, 0);
+            false, DoorSound.BLOOP, 0, 0, 0);
 
-    public static final List<Shape> SHAPES = List.of(POLICE_BOX, PHONE_BOOTH, BLUEBERRY_BOX, BLOCKTIS, TYPE_70, ONION);
+    public static final List<Shape> SHAPES = List.of(POLICE_BOX, ONION);
 
     private AwtExteriors() {
     }
@@ -114,12 +111,20 @@ public final class AwtExteriors {
 
         @Override
         public SoundEvent openSound() {
-            return shape.policeBoxSounds() ? ATASounds.POLICE_BOX_DOOR_OPEN : super.openSound();
+            return switch (shape.doorSound()) {
+                case POLICE_BOX -> ATASounds.POLICE_BOX_DOOR_OPEN;
+                case BLOOP -> ATASounds.BLOOP;
+                default -> super.openSound();
+            };
         }
 
         @Override
         public SoundEvent closeSound() {
-            return shape.policeBoxSounds() ? ATASounds.POLICE_BOX_DOOR_CLOSE : super.closeSound();
+            return switch (shape.doorSound()) {
+                case POLICE_BOX -> ATASounds.POLICE_BOX_DOOR_CLOSE;
+                case BLOOP -> ATASounds.BLOOP;
+                default -> super.closeSound();
+            };
         }
 
         @Override

@@ -1,0 +1,6 @@
+{
+  "id": "ata:onion_takeoff",
+  "expected_state": "demat",
+  "sound": "ait:tardis/demat",
+  "blockbench_file": "ata:onion_takeoff"
+}

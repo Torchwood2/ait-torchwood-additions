@@ -153,256 +153,62 @@ public final class AwtModels {
         return TexturedModelData.of(modelData, 256, 256);
     }
 
-    /** From k6booth.bbmodel. */
-    public static TexturedModelData phoneBooth() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData root = modelPartData.addChild("root", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-        ModelPartData door = root.addChild("door", ModelPartBuilder.create()
-        .uv(128, 143).cuboid(0.4467F, -39.0F, -0.7067F, 15.0F, 38.0F, 1.0F, new Dilation(0.0F))
-        .uv(16, 17).cuboid(0.7667F, -39.0F, -0.6067F, 14.0F, 38.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, 0.0F, -10.0F));
-        ModelPartData frame = root.addChild("frame", ModelPartBuilder.create()
-        .uv(106, 157).cuboid(7.5F, -39.0F, -10.5F, 3.0F, 38.0F, 3.0F, new Dilation(0.0F))
-        .uv(160, 128).cuboid(-10.5F, -39.0F, -10.5F, 3.0F, 38.0F, 3.0F, new Dilation(0.0F))
-        .uv(168, 39).cuboid(-10.5F, -39.0F, 7.5F, 3.0F, 38.0F, 3.0F, new Dilation(0.0F))
-        .uv(160, 169).cuboid(7.5F, -39.0F, 7.5F, 3.0F, 38.0F, 3.0F, new Dilation(0.0F))
-        .uv(0, 103).cuboid(-10.5F, -39.0F, -7.5F, 1.0F, 38.0F, 15.0F, new Dilation(0.0F))
-        .uv(128, 104).cuboid(-7.5F, -39.0F, 9.5F, 15.0F, 38.0F, 1.0F, new Dilation(0.0F))
-        .uv(32, 103).cuboid(9.5F, -39.0F, -7.5F, 1.0F, 38.0F, 15.0F, new Dilation(0.0F))
-        .uv(82, 42).cuboid(-10.5F, -42.0F, -10.5F, 21.0F, 3.0F, 3.0F, new Dilation(0.0F))
-        .uv(84, 79).cuboid(-10.0F, -47.0F, -10.0F, 1.0F, 5.0F, 20.0F, new Dilation(0.0001F))
-        .uv(0, 79).cuboid(-10.5F, -50.0F, -10.5F, 21.0F, 3.0F, 21.0F, new Dilation(0.001F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        frame.addChild("cube_r1", ModelPartBuilder.create().uv(84, 79).cuboid(-10.0F, -47.0F, -10.0F, 1.0F, 5.0F, 20.0F, new Dilation(0.01F)).uv(82, 36).cuboid(-10.5F, -42.0F, -10.5F, 21.0F, 3.0F, 3.0F, new Dilation(0.01F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 3.1416F, 0.0F));
-        frame.addChild("cube_r2", ModelPartBuilder.create().uv(84, 79).cuboid(-10.0F, -47.0F, -10.0F, 1.0F, 5.0F, 20.0F, new Dilation(0.001F)).uv(82, 36).cuboid(-10.5F, -42.0F, -10.5F, 21.0F, 3.0F, 3.0F, new Dilation(0.01F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
-        frame.addChild("cube_r3", ModelPartBuilder.create().uv(84, 79).cuboid(-10.0F, -47.0F, -10.0F, 1.0F, 5.0F, 20.0F, new Dilation(0.0F)).uv(82, 36).cuboid(-10.5F, -42.0F, -10.5F, 21.0F, 3.0F, 3.0F, new Dilation(0.001F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
-        ModelPartData bulb = frame.addChild("bulb", ModelPartBuilder.create()
-        .uv(148, 24).cuboid(-1.0F, -2.0F, -1.0F, 2.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -45.0F, 0.0F, 0.0F, 0.7854F, 0.0F));
-        ModelPartData phone2 = frame.addChild("phone2", ModelPartBuilder.create()
-        .uv(64, 48).cuboid(10.0F, -17.0F, 14.0F, 5.0F, 1.0F, 6.0F, new Dilation(0.0F))
-        .uv(172, 135).cuboid(14.0F, -23.0F, 14.0F, 1.0F, 6.0F, 6.0F, new Dilation(0.0F))
-        .uv(134, 72).cuboid(10.0F, -24.0F, 14.0F, 5.0F, 1.0F, 6.0F, new Dilation(0.0F))
-        .uv(164, 93).cuboid(0.0F, -24.0F, 14.0F, 5.0F, 1.0F, 6.0F, new Dilation(0.0F))
-        .uv(172, 147).cuboid(0.0F, -23.0F, 14.0F, 1.0F, 6.0F, 6.0F, new Dilation(0.0F))
-        .uv(172, 128).cuboid(0.0F, -17.0F, 14.0F, 5.0F, 1.0F, 6.0F, new Dilation(0.0F))
-        .uv(164, 80).cuboid(5.0F, -24.0F, 16.0F, 5.0F, 9.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(-7.5F, -1.0F, -11.5F));
-        ModelPartData book = phone2.addChild("book", ModelPartBuilder.create()
-        .uv(172, 159).cuboid(-2.0F, -5.0F, -2.5F, 2.0F, 5.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(12.0F, -17.0F, 17.5F, 0.0F, 0.0F, 0.4102F));
-        ModelPartData phone = phone2.addChild("phone", ModelPartBuilder.create()
-        .uv(148, 39).cuboid(-2.5F, -1.0F, 0.0F, 5.0F, 1.0F, 3.0F, new Dilation(0.0F))
-        .uv(148, 30).cuboid(-1.5F, -3.0F, 1.0F, 3.0F, 2.0F, 1.0F, new Dilation(0.0F))
-        .uv(156, 72).cuboid(-5.5F, -2.0F, 1.5F, 4.0F, 5.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(3.5F, -24.0F, 15.5F, 0.0F, -0.6109F, 0.0F));
-        ModelPartData recieverholder1 = phone.addChild("recieverholder1", ModelPartBuilder.create()
-        .uv(148, 45).cuboid(-1.5F, -1.0F, 0.0F, 3.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -3.0F, 1.0F, 0.7854F, 0.0F, 0.0F));
-        ModelPartData recieverholder2 = phone.addChild("recieverholder2", ModelPartBuilder.create()
-        .uv(156, 45).cuboid(-1.5F, -1.0F, -1.0F, 3.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -3.0F, 2.0F, -0.7854F, 0.0F, 0.0F));
-        ModelPartData dialangler = phone.addChild("dialangler", ModelPartBuilder.create(), ModelTransform.of(0.0F, -1.0F, 0.0F, -0.4363F, 0.0F, 0.0F));
-        ModelPartData dial = dialangler.addChild("dial", ModelPartBuilder.create()
-        .uv(86, 48).cuboid(-1.0F, -1.0F, 0.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -1.0F, 0.0F));
-        ModelPartData handset = phone.addChild("handset", ModelPartBuilder.create()
-        .uv(148, 43).cuboid(-2.5F, -1.0F, -0.5F, 5.0F, 1.0F, 1.0F, new Dilation(0.0F))
-        .uv(148, 33).cuboid(-3.5F, -0.5F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F))
-        .uv(148, 36).cuboid(1.5F, -0.5F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -3.0F, 1.5F));
-        ModelPartData phone3 = frame.addChild("phone3", ModelPartBuilder.create()
-        .uv(64, 0).cuboid(-11.0933F, 0.0F, -1.0F, 23.0F, 1.0F, 23.0F, new Dilation(0.0F))
-        .uv(64, 104).cuboid(9.4067F, -38.0F, 3.0F, 1.0F, 38.0F, 15.0F, new Dilation(0.0F))
-        .uv(96, 104).cuboid(-9.5933F, -38.0F, 3.0F, 1.0F, 38.0F, 15.0F, new Dilation(0.0F)), ModelTransform.pivot(-0.4067F, -1.0F, -10.5F));
-        return TexturedModelData.of(modelData, 256, 256);
-    }
-
-    /** From blueberrybox.bbmodel. */
-    public static TexturedModelData blueberryBox() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData parent = modelPartData.addChild("parent", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-        ModelPartData fade_value = parent.addChild("fade_value", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData right_door = parent.addChild("right_door", ModelPartBuilder.create()
-        .uv(204, 208).cuboid(-12.0F, -52.0F, -0.5F, 12.0F, 52.0F, 0.0F, new Dilation(0.0F))
-        .uv(152, 208).cuboid(-12.0F, -52.0F, -1.0F, 12.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(124, 64).cuboid(-11.5F, -30.0F, -3.0F, 0.0F, 5.0F, 2.0F, new Dilation(0.0F))
-        .uv(132, 64).cuboid(-12.0F, -33.0F, -1.5F, 1.0F, 1.0F, 0.5F, new Dilation(0.0F)), ModelTransform.pivot(12.5F, -3.0F, -14.0F));
-        ModelPartData left_door = parent.addChild("left_door", ModelPartBuilder.create()
-        .uv(178, 208).cuboid(0.0F, -52.0F, -1.0F, 12.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(228, 129).cuboid(12.0F, -52.0F, -1.5F, 1.0F, 52.0F, 0.5F, new Dilation(0.0F))
-        .uv(128, 64).cuboid(10.46F, -34.5F, -3.0F, 0.0F, 4.0F, 2.0F, new Dilation(0.0F))
-        .uv(0, 210).cuboid(0.0F, -52.0F, -0.5F, 12.0F, 52.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-12.5F, -3.0F, -14.0F));
-        ModelPartData frame = parent.addChild("frame", ModelPartBuilder.create()
-        .uv(108, 104).cuboid(-15.0F, -55.0F, -12.5F, 1.0F, 52.0F, 25.0F, new Dilation(0.0F))
-        .uv(0, 38).cuboid(-15.5F, -57.0F, -15.5F, 31.0F, 2.0F, 31.0F, new Dilation(0.0F))
-        .uv(96, 210).cuboid(14.5F, -55.0F, -0.5F, 1.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(212, 155).cuboid(-15.5F, -55.0F, -0.5F, 1.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(228, 76).cuboid(-0.5F, -55.0F, 14.5F, 1.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(48, 218).cuboid(-15.5F, -55.0F, -15.5F, 3.0F, 52.0F, 3.0F, new Dilation(0.0F))
-        .uv(60, 218).cuboid(-15.5F, -55.0F, 12.5F, 3.0F, 52.0F, 3.0F, new Dilation(0.0F))
-        .uv(72, 218).cuboid(12.5F, -55.0F, 12.5F, 3.0F, 52.0F, 3.0F, new Dilation(0.0F))
-        .uv(84, 218).cuboid(12.5F, -55.0F, -15.5F, 3.0F, 52.0F, 3.0F, new Dilation(0.0F))
-        .uv(0, 0).cuboid(-17.5F, -3.0F, -17.5F, 35.0F, 3.0F, 35.0F, new Dilation(0.0F))
-        .uv(0, 71).cuboid(-15.0F, -63.0F, -15.0F, 30.0F, 3.0F, 30.0F, new Dilation(0.0F))
-        .uv(0, 104).cuboid(-13.5F, -64.5F, -13.5F, 27.0F, 2.0F, 27.0F, new Dilation(0.0F))
-        .uv(120, 77).cuboid(-12.0F, -66.0F, -12.0F, 24.0F, 2.0F, 24.0F, new Dilation(0.0F))
-        .uv(228, 182).cuboid(-4.0F, -67.0F, -4.0F, 8.0F, 1.0F, 8.0F, new Dilation(0.0F))
-        .uv(120, 71).cuboid(-2.0F, -69.0F, -2.0F, 4.0F, 2.0F, 4.0F, new Dilation(0.0F))
-        .uv(124, 44).cuboid(-1.5F, -72.0F, -1.5F, 3.0F, 3.0F, 3.0F, new Dilation(0.0F))
-        .uv(124, 38).cuboid(-2.0F, -74.0F, -2.0F, 4.0F, 2.0F, 4.0F, new Dilation(0.0F))
-        .uv(124, 60).cuboid(-1.5F, -75.0F, -1.5F, 3.0F, 1.0F, 3.0F, new Dilation(0.0F))
-        .uv(102, 181).cuboid(-12.5F, -55.0F, 14.5F, 25.0F, 52.0F, 0.0F, new Dilation(0.0F))
-        .uv(216, 76).cuboid(13.5F, -62.0F, -16.5F, 3.0F, 59.0F, 3.0F, new Dilation(0.0F))
-        .uv(190, 68).cuboid(-15.0F, -60.5F, -17.5F, 30.0F, 4.0F, 4.0F, new Dilation(0.0F))
-        .uv(190, 0).cuboid(-17.5F, -60.5F, -15.0F, 4.0F, 4.0F, 30.0F, new Dilation(0.0F))
-        .uv(24, 210).cuboid(-15.0F, -60.5F, 13.5F, 30.0F, 4.0F, 4.0F, new Dilation(0.0F))
-        .uv(190, 34).cuboid(13.5F, -60.5F, -15.0F, 4.0F, 4.0F, 30.0F, new Dilation(0.0F))
-        .uv(216, 138).cuboid(13.5F, -62.0F, 13.5F, 3.0F, 59.0F, 3.0F, new Dilation(0.0F))
-        .uv(24, 218).cuboid(-16.5F, -62.0F, -16.5F, 3.0F, 59.0F, 3.0F, new Dilation(0.0F))
-        .uv(36, 218).cuboid(-16.5F, -62.0F, 13.5F, 3.0F, 59.0F, 3.0F, new Dilation(0.0F))
-        .uv(160, 155).cuboid(-12.5F, -55.0F, 14.0F, 25.0F, 52.0F, 1.0F, new Dilation(0.0F))
-        .uv(0, 133).cuboid(14.0F, -55.0F, -12.5F, 1.0F, 52.0F, 25.0F, new Dilation(0.0F))
-        .uv(52, 133).cuboid(14.5F, -55.0F, -12.5F, 0.0F, 52.0F, 25.0F, new Dilation(0.0F))
-        .uv(140, 0).cuboid(-14.5F, -55.0F, -12.5F, 0.0F, 52.0F, 25.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData lampstruts_1 = frame.addChild("lampstruts_1", ModelPartBuilder.create()
-        .uv(124, 50).cuboid(-3.0F, -4.0F, 0.0F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -69.0F, 0.0F, 0.0F, -0.7854F, 0.0F));
-        ModelPartData lampstruts_2 = frame.addChild("lampstruts_2", ModelPartBuilder.create()
-        .uv(124, 55).cuboid(-3.0F, -4.0F, 0.0F, 6.0F, 5.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -69.0F, 0.0F, 0.0F, 0.7854F, 0.0F));
-        ModelPartData portal = modelPartData.addChild("portal", ModelPartBuilder.create()
-        .uv(160, 103).cuboid(-14.0F, -55.0F, 0.0F, 28.0F, 52.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-        return TexturedModelData.of(modelData, 512, 512);
-    }
-
-    /** From tardis.bbmodel. */
-    public static TexturedModelData blocktis() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -2.0F, 0.0F));
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create()
-        .uv(64, 246).cuboid(0.0F, -8.0F, 0.0F, 16.0F, 32.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, 0.0F, -24.0F));
-        ModelPartData middle = bone.addChild("middle", ModelPartBuilder.create()
-        .uv(100, 54).cuboid(8.0F, -8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(100, 86).cuboid(8.0F, -8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 102).cuboid(8.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 118).cuboid(-24.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 118).cuboid(-24.0F, -8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 134).cuboid(-24.0F, -8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 150).cuboid(-8.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData toplayer = bone.addChild("toplayer", ModelPartBuilder.create()
-        .uv(128, 150).cuboid(8.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(164, 54).cuboid(8.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(164, 86).cuboid(8.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 166).cuboid(-24.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 182).cuboid(-24.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 182).cuboid(-24.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 118).cuboid(-8.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 150).cuboid(-8.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 182).cuboid(-8.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData sign = toplayer.addChild("sign", ModelPartBuilder.create()
-        .uv(0, 54).cuboid(-24.0F, -21.0F, -26.3F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F))
-        .uv(0, 66).cuboid(-24.0F, -21.0F, 24.8F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        sign.addChild("cube_r1", ModelPartBuilder.create().uv(0, 90).cuboid(-26.0F, 0.0F, -1.0F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-25.5F, -21.0F, -1.7F, 0.0F, 1.5708F, 0.0F));
-        sign.addChild("cube_r2", ModelPartBuilder.create().uv(0, 78).cuboid(-26.0F, 0.0F, -1.0F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(25.5F, -21.0F, -1.7F, 0.0F, 1.5708F, 0.0F));
-        ModelPartData bottomlayer = bone.addChild("bottomlayer", ModelPartBuilder.create()
-        .uv(0, 198).cuboid(8.0F, 8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(208, 0).cuboid(8.0F, 8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 214).cuboid(8.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 214).cuboid(-24.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 214).cuboid(-24.0F, 8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(228, 32).cuboid(-24.0F, 8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(228, 64).cuboid(-8.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 0).cuboid(-26.0F, 24.0F, -26.0F, 52.0F, 2.0F, 52.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData beacon = bone.addChild("beacon", ModelPartBuilder.create()
-        .uv(0, 230).cuboid(-8.0F, -15.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(229, 96).cuboid(-6.0F, -1.0F, -6.0F, 12.0F, 2.0F, 12.0F, new Dilation(0.0F))
-        .uv(96, 246).cuboid(-5.0F, -11.0F, -5.0F, 10.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -25.0F, 0.0F));
-        return TexturedModelData.of(modelData, 512, 512);
-    }
-
-    /** From tardisv2.bbmodel. */
-    public static TexturedModelData blocktisV2() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -2.0F, 0.0F));
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create()
-        .uv(64, 246).cuboid(0.0F, -8.0F, 0.0F, 16.0F, 32.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-8.0F, 0.0F, -24.0F));
-        ModelPartData middle = bone.addChild("middle", ModelPartBuilder.create()
-        .uv(208, 0).cuboid(8.0F, -8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 214).cuboid(8.0F, -8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 214).cuboid(8.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 214).cuboid(-24.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(228, 32).cuboid(-24.0F, -8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(228, 64).cuboid(-24.0F, -8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 230).cuboid(-8.0F, -8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData toplayer = bone.addChild("toplayer", ModelPartBuilder.create()
-        .uv(336, 58).cuboid(8.0F, -32.0F, -24.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(-8.0F, -32.0F, -24.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(-24.0F, -32.0F, -24.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(-24.0F, -32.0F, 8.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(8.0F, -32.0F, 8.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(-8.0F, -32.0F, 8.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(8.0F, -32.0F, -8.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(336, 58).cuboid(-24.0F, -32.0F, -8.0F, 16.0F, 8.0F, 16.0F, new Dilation(0.0F))
-        .uv(164, 54).cuboid(8.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(164, 86).cuboid(8.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 166).cuboid(8.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 182).cuboid(-24.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 182).cuboid(-24.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 118).cuboid(-24.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 150).cuboid(-8.0F, -24.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(192, 182).cuboid(-8.0F, -24.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 198).cuboid(-8.0F, -24.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData sign = toplayer.addChild("sign", ModelPartBuilder.create()
-        .uv(0, 54).cuboid(-24.0F, -21.0F, -26.3F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F))
-        .uv(0, 66).cuboid(-24.0F, -21.0F, 24.8F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        sign.addChild("cube_r1", ModelPartBuilder.create().uv(0, 90).cuboid(-26.0F, 0.0F, -1.0F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-25.5F, -21.0F, -1.7F, 0.0F, 1.5708F, 0.0F));
-        sign.addChild("cube_r2", ModelPartBuilder.create().uv(0, 78).cuboid(-26.0F, 0.0F, -1.0F, 48.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(25.5F, -21.0F, -1.7F, 0.0F, 1.5708F, 0.0F));
-        ModelPartData bottomlayer = bone.addChild("bottomlayer", ModelPartBuilder.create()
-        .uv(100, 86).cuboid(8.0F, 8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 102).cuboid(8.0F, 8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 118).cuboid(8.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 118).cuboid(-24.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 134).cuboid(-24.0F, 8.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(64, 150).cuboid(-24.0F, 8.0F, -24.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(128, 150).cuboid(-8.0F, 8.0F, 8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F))
-        .uv(0, 0).cuboid(-26.0F, 24.0F, -26.0F, 52.0F, 2.0F, 52.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
-        ModelPartData lamp = bone.addChild("lamp", ModelPartBuilder.create()
-        .uv(100, 54).cuboid(-8.0F, -15.0F, -8.0F, 16.0F, 16.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -25.0F, 0.0F));
-        return TexturedModelData.of(modelData, 512, 512);
-    }
-
-    /** From type 70 mk2.bbmodel. */
-    public static TexturedModelData type70() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create()
-        .uv(0, 0).cuboid(-16.0F, -36.0F, -8.0F, 32.0F, 4.0F, 24.0F, new Dilation(0.0F))
-        .uv(64, 52).cuboid(8.0F, -32.0F, -8.0F, 8.0F, 32.0F, 24.0F, new Dilation(0.0F))
-        .uv(0, 28).cuboid(-16.0F, 0.1F, -8.0F, 32.0F, 0.0F, 24.0F, new Dilation(0.0F))
-        .uv(0, 52).cuboid(-16.0F, -32.0F, -8.0F, 8.0F, 32.0F, 24.0F, new Dilation(0.0F))
-        .uv(0, 108).cuboid(-8.0F, -32.0F, 0.0F, 16.0F, 32.0F, 16.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create()
-        .uv(112, 0).cuboid(-15.0F, -0.01F, 83.0F, 16.0F, 0.0F, 15.0F, new Dilation(0.0F))
-        .uv(64, 108).cuboid(-15.0F, -32.01F, 82.0F, 16.0F, 1.0F, 16.0F, new Dilation(0.0F))
-        .uv(112, 15).cuboid(-15.0F, -31.01F, 82.0F, 16.0F, 31.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(7.0F, 0.0F, -90.0F));
-        return TexturedModelData.of(modelData, 256, 256);
-    }
-
-    /** From type70 doors.bbmodel. */
-    public static TexturedModelData type70Door() {
-        ModelData modelData = new ModelData();
-        ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create()
-        .uv(89, 152).cuboid(-16.0F, -36.0F, 0.0F, 32.0F, 4.0F, 1.0F, new Dilation(0.0F))
-        .uv(119, 157).cuboid(7.0F, -32.0F, 0.0F, 9.0F, 32.0F, 1.0F, new Dilation(0.0F))
-        .uv(89, 190).cuboid(-16.0F, -32.0F, 0.0F, 9.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, -8.0F));
-        ModelPartData door = bone.addChild("door", ModelPartBuilder.create()
-        .uv(89, 157).cuboid(-14.0F, -32.01F, 82.0F, 14.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(7.0F, 0.0F, -83.0F));
-        return TexturedModelData.of(modelData, 256, 256);
-    }
-
-    /** From Onion Model Interior.bbmodel. */
+    /** The Onion, from Deo's Onion Model export. "OmgitsaUFO" is the beam. */
     public static TexturedModelData onion() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        ModelPartData Root = modelPartData.addChild("Root", ModelPartBuilder.create()
-        .uv(88, 44).cuboid(-5.0F, 0.0F, -5.0F, 10.0F, 35.0F, 10.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -12.0F, 0.0F));
-        Root.addChild("cube_r1", ModelPartBuilder.create().uv(0, 48).cuboid(-2.0F, -7.0F, -7.0F, 1.0F, 14.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 37.0F, 0.0F, 1.5708F, 0.0F, 1.5708F));
+        ModelPartData Root = modelPartData.addChild("Root", ModelPartBuilder.create().uv(0, 0).cuboid(-8.0F, 3.5F, -7.0F, 16.0F, 10.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, -23.5F, 0.0F, 0.0F, 3.1416F, 0.0F));
+        Root.addChild("top/bottom_r1", ModelPartBuilder.create().uv(0, 48).cuboid(-2.0F, -7.0F, -7.0F, 12.0F, 14.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 12.5F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        Root.addChild("front/back_r1", ModelPartBuilder.create().uv(0, 24).cuboid(-8.0F, -9.0F, -7.0F, 16.0F, 10.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 12.5F, 0.0F, 0.0F, 1.5708F, 0.0F));
+        ModelPartData Body = Root.addChild("Body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 12.5F, 0.0F));
+        ModelPartData Hat = Body.addChild("Hat", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -2.0F, 0.0F));
+        ModelPartData Top_r1 = Hat.addChild("Top_r1", ModelPartBuilder.create().uv(60, 44).cuboid(10.0F, -1.0F, -1.0F, 1.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Mid_r1 = Hat.addChild("Mid_r1", ModelPartBuilder.create().uv(36, 76).cuboid(10.0F, -2.0F, -2.0F, 1.0F, 4.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 1.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Low_r1 = Hat.addChild("Low_r1", ModelPartBuilder.create().uv(52, 48).cuboid(10.0F, -5.0F, -5.0F, 1.0F, 10.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 2.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData OmgitsaUFO = Body.addChild("OmgitsaUFO", ModelPartBuilder.create().uv(88, 44).cuboid(-5.0F, 0.0F, -5.0F, 10.0F, 35.0F, 10.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+        ModelPartData GetInLoserWereGoingShopping = OmgitsaUFO.addChild("GetInLoserWereGoingShopping", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 3.0F, 0.0F));
+        ModelPartData Arrow_r1 = GetInLoserWereGoingShopping.addChild("Arrow_r1", ModelPartBuilder.create().uv(0, -2).cuboid(0.0F, -4.0F, -3.5F, 0.0F, 8.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(-0.25F, 19.0F, 5.25F, 0.0F, -1.5708F, 0.0F));
+        ModelPartData Petals = Body.addChild("Petals", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -12.5F, 0.0F));
+        ModelPartData petal3_r1 = Petals.addChild("petal3_r1", ModelPartBuilder.create().uv(0, 76).cuboid(0.0F, 1.0F, -3.0F, 0.0F, 8.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -2.5133F, 0.0F, -1.5708F));
+        ModelPartData petal2_r1 = Petals.addChild("petal2_r1", ModelPartBuilder.create().uv(74, 66).cuboid(0.0F, 1.0F, -3.0F, 0.0F, 8.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.2566F, 0.0F, -1.5708F));
+        ModelPartData petal1_r1 = Petals.addChild("petal1_r1", ModelPartBuilder.create().uv(74, 52).cuboid(0.0F, 1.0F, -3.0F, 0.0F, 8.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -1.5708F));
+        ModelPartData petal5_r1 = Petals.addChild("petal5_r1", ModelPartBuilder.create().uv(24, 76).cuboid(0.0F, 1.0F, -3.0F, 0.0F, 8.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 1.2566F, 0.0F, -1.5708F));
+        ModelPartData petal4_r1 = Petals.addChild("petal4_r1", ModelPartBuilder.create().uv(12, 76).cuboid(0.0F, 1.0F, -3.0F, 0.0F, 8.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 2.5133F, 0.0F, -1.5708F));
+        ModelPartData Leg1 = Root.addChild("Leg1", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 12.25F, -8.25F));
+        ModelPartData Hip_r1 = Leg1.addChild("Hip_r1", ModelPartBuilder.create().uv(60, 36).cuboid(0.25F, -2.0F, -2.0F, 7.0F, 4.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 1.5F, -0.75F, -1.5708F, -0.3927F, -1.5708F));
+        ModelPartData Joint1 = Leg1.addChild("Joint1", ModelPartBuilder.create(), ModelTransform.of(0.0F, 1.5F, -0.75F, -0.3927F, 0.0F, 0.0F));
+        ModelPartData leg_r1 = Joint1.addChild("leg_r1", ModelPartBuilder.create().uv(60, 0).cuboid(-13.75F, -1.0F, -1.0F, 15.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint2 = Joint1.addChild("Joint2", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 14.0F, 0.0F));
+        ModelPartData leg_r2 = Joint2.addChild("leg_r2", ModelPartBuilder.create().uv(60, 20).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint3 = Joint2.addChild("Joint3", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
+        ModelPartData leg_r3 = Joint3.addChild("leg_r3", ModelPartBuilder.create().uv(60, 24).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Leg2 = Root.addChild("Leg2", ModelPartBuilder.create(), ModelTransform.of(7.1447F, 12.25F, 4.125F, -3.1416F, -1.0472F, 3.1416F));
+        ModelPartData Hip_r2 = Leg2.addChild("Hip_r2", ModelPartBuilder.create().uv(52, 68).cuboid(0.25F, -2.0F, -2.0F, 7.0F, 4.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 1.5F, -0.75F, -1.5708F, -0.3927F, -1.5708F));
+        ModelPartData Joint4 = Leg2.addChild("Joint4", ModelPartBuilder.create(), ModelTransform.of(0.0F, 1.5F, -0.75F, -0.3927F, 0.0F, 0.0F));
+        ModelPartData leg_r4 = Joint4.addChild("leg_r4", ModelPartBuilder.create().uv(60, 4).cuboid(-13.75F, -1.0F, -1.0F, 15.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint5 = Joint4.addChild("Joint5", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 14.0F, 0.0F));
+        ModelPartData leg_r5 = Joint5.addChild("leg_r5", ModelPartBuilder.create().uv(60, 28).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint6 = Joint5.addChild("Joint6", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
+        ModelPartData leg_r6 = Joint6.addChild("leg_r6", ModelPartBuilder.create().uv(60, 32).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Leg3 = Root.addChild("Leg3", ModelPartBuilder.create(), ModelTransform.of(-7.1447F, 12.25F, 4.125F, -3.1416F, 1.0472F, 3.1416F));
+        ModelPartData Hip_r3 = Leg3.addChild("Hip_r3", ModelPartBuilder.create().uv(74, 44).cuboid(0.25F, -2.0F, -2.0F, 7.0F, 4.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 1.5F, -0.75F, -1.5708F, -0.3927F, -1.5708F));
+        ModelPartData Joint7 = Leg3.addChild("Joint7", ModelPartBuilder.create(), ModelTransform.of(0.0F, 1.5F, -0.75F, -0.3927F, 0.0F, 0.0F));
+        ModelPartData leg_r7 = Joint7.addChild("leg_r7", ModelPartBuilder.create().uv(60, 8).cuboid(-13.75F, -1.0F, -1.0F, 15.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint8 = Joint7.addChild("Joint8", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 14.0F, 0.0F));
+        ModelPartData leg_r8 = Joint8.addChild("leg_r8", ModelPartBuilder.create().uv(60, 12).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        ModelPartData Joint9 = Joint8.addChild("Joint9", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 12.0F, 0.0F));
+        ModelPartData leg_r9 = Joint9.addChild("leg_r9", ModelPartBuilder.create().uv(60, 16).cuboid(-11.75F, -1.0F, -1.0F, 13.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -1.5708F));
+        return TexturedModelData.of(modelData, 128, 128);
+    }
+
+    /** The Onion's interior door: the beam ("Root", with the arrow) on a floor pad. */
+    public static TexturedModelData onionDoor() {
+        ModelData modelData = new ModelData();
+        ModelPartData modelPartData = modelData.getRoot();
+        ModelPartData Root = modelPartData.addChild("Root", ModelPartBuilder.create().uv(88, 44).cuboid(-5.0F, 0.0F, -5.0F, 10.0F, 35.0F, 10.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -12.0F, 0.0F));
+        Root.addChild("top/bottom_r1", ModelPartBuilder.create().uv(0, 48).cuboid(-2.0F, -7.0F, -7.0F, 1.0F, 14.0F, 14.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 37.0F, 0.0F, 1.5708F, 0.0F, 1.5708F));
         ModelPartData GetInLoserWereGoingShopping = Root.addChild("GetInLoserWereGoingShopping", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 3.0F, 0.0F));
-        GetInLoserWereGoingShopping.addChild("cube_r2", ModelPartBuilder.create().uv(0, -2).cuboid(0.0F, -4.0F, -3.5F, 0.0F, 8.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(-0.25F, 19.0F, 5.25F, 0.0F, -1.5708F, 0.0F));
+        ModelPartData Arrow_r1 = GetInLoserWereGoingShopping.addChild("Arrow_r1", ModelPartBuilder.create().uv(0, -2).cuboid(0.0F, -4.0F, -3.5F, 0.0F, 8.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(-0.25F, 19.0F, 5.25F, 0.0F, -1.5708F, 0.0F));
         return TexturedModelData.of(modelData, 128, 128);
     }
 
