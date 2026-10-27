@@ -71,8 +71,8 @@ public final class ATABlocks {
 
     public static void register() {
         for (Map.Entry<String, Block> roundel : ROUNDEL_MATERIALS.entrySet()) {
-            register(roundel.getKey() + "_roundel", new Block(FabricBlockSettings.copyOf(roundel.getValue())));
-            register(roundel.getKey() + "_roundel_half", new Block(FabricBlockSettings.copyOf(roundel.getValue())));
+            register(roundel.getKey() + "_roundel", new Block(copyOf(roundel.getValue())));
+            register(roundel.getKey() + "_roundel_half", new Block(copyOf(roundel.getValue())));
         }
         HARTNELL_WALL = register("hartnell_wall", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
 
@@ -90,6 +90,14 @@ public final class ATABlocks {
         DEEPSLATE_ATRIUM_ORE = register("deepslate_atrium_ore", new ExperienceDroppingBlock(
                 FabricBlockSettings.copyOf(Blocks.DEEPSLATE_GOLD_ORE).sounds(BlockSoundGroup.DEEPSLATE).requiresTool(),
                 UniformIntProvider.create(2, 5)));
+    }
+
+    /**
+     * The vanilla block's settings, but with a fixed map colour: logs pick theirs from their AXIS
+     * property, which a plain block doesn't have (that crashed on startup).
+     */
+    private static FabricBlockSettings copyOf(Block base) {
+        return FabricBlockSettings.copyOf(base).mapColor(base.getDefaultMapColor());
     }
 
     private static Block register(String name, Block block) {
