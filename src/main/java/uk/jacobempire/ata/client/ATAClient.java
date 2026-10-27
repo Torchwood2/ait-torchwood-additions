@@ -10,6 +10,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.text.Text;
 import uk.jacobempire.ata.ATA;
+import uk.jacobempire.ata.client.awt.AwtClient;
 import net.minecraft.client.render.RenderLayer;
 import uk.jacobempire.ata.core.ATABlocks;
 
@@ -19,6 +20,9 @@ public class ATAClient implements ClientModInitializer {
     public void onInitializeClient() {
         // The grates have holes you can see through.
         ATABlocks.CUTOUT.forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
+
+        // The AWT exteriors' models and textures.
+        AwtClient.register();
 
         // Optional GUI recolours for AIT's monitor screens, switched on in Options > Resource Packs.
         ModContainer mod = FabricLoader.getInstance().getModContainer(ATA.MOD_ID).orElseThrow();
