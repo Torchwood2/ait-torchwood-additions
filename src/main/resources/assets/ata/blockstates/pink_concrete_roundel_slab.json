@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/pink_concrete_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/pink_concrete_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/pink_concrete_roundel_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ata:block/roundel/stripped_acacia_log_roundel_full",
+    "top": "ata:block/roundel/stripped_acacia_log_roundel_full",
+    "side": "ata:block/roundel/stripped_acacia_log_roundel_full"
+  }
+}

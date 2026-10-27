@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/stripped_birch_log_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/stripped_birch_log_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/stripped_birch_log_roundel_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/sandstone_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/sandstone_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/sandstone_roundel_slab_top"
+    }
+  }
+}

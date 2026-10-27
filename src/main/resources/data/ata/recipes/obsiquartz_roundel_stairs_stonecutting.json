@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:obsiquartz_roundel"
+  },
+  "result": "ata:obsiquartz_roundel_stairs",
+  "count": 1
+}

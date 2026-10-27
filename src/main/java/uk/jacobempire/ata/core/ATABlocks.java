@@ -3,7 +3,12 @@ package uk.jacobempire.ata.core;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockSetType;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TrapdoorBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -18,8 +23,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Every block in the mod. Each roundel comes as two blocks: {@code <name>_roundel} (one big roundel)
- * and {@code <name>_roundel_half} (half roundels top and bottom, for stacking into walls). They take
+ * Every block in the mod. Each roundel comes as {@code <name>_roundel} (one big roundel),
+ * {@code <name>_roundel_half} (half roundels top and bottom, for stacking into walls), and stairs and a
+ * slab of the full roundel. They take
  * their hardness, sound and tool from the vanilla block they're made of.
  */
 public final class ATABlocks {
@@ -61,6 +67,10 @@ public final class ATABlocks {
     /** Blocks with see-through gaps (the grates). */
     public static final List<Block> CUTOUT = new ArrayList<>();
 
+    /** Grate trapdoors open by hand, with iron trapdoor sounds. */
+    private static final BlockSetType GRATE = BlockSetTypeBuilder.copyOf(BlockSetType.IRON).openableByHand(true)
+            .register(ATA.id("grate"));
+
     public static Block HARTNELL_WALL;
     public static Block ATRIUM_BLOCK;
     public static Block ATRIUM_ORE;
@@ -71,8 +81,10 @@ public final class ATABlocks {
 
     public static void register() {
         for (Map.Entry<String, Block> roundel : ROUNDEL_MATERIALS.entrySet()) {
-            register(roundel.getKey() + "_roundel", new Block(copyOf(roundel.getValue())));
+            Block full = register(roundel.getKey() + "_roundel", new Block(copyOf(roundel.getValue())));
             register(roundel.getKey() + "_roundel_half", new Block(copyOf(roundel.getValue())));
+            register(roundel.getKey() + "_roundel_stairs", new StairsBlock(full.getDefaultState(), copyOf(roundel.getValue())));
+            register(roundel.getKey() + "_roundel_slab", new SlabBlock(copyOf(roundel.getValue())));
         }
         HARTNELL_WALL = register("hartnell_wall", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
 
@@ -82,6 +94,11 @@ public final class ATABlocks {
                     .solidBlock((state, world, pos) -> false)
                     .suffocates((state, world, pos) -> false)
                     .blockVision((state, world, pos) -> false))));
+        }
+
+        for (String grate : List.of("grate", "thick_grate", "rusty_grate", "rusty_thick_grate")) {
+            CUTOUT.add(register(grate + "_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR)
+                    .allowsSpawning((state, world, pos, type) -> false), GRATE)));
         }
 
         ATRIUM_BLOCK = register("atrium_block", new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));

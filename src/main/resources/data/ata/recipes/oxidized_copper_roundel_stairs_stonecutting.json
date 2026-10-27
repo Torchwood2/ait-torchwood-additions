@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:oxidized_copper_roundel"
+  },
+  "result": "ata:oxidized_copper_roundel_stairs",
+  "count": 1
+}

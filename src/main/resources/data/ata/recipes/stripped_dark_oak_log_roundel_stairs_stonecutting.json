@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:stripped_dark_oak_log_roundel"
+  },
+  "result": "ata:stripped_dark_oak_log_roundel_stairs",
+  "count": 1
+}

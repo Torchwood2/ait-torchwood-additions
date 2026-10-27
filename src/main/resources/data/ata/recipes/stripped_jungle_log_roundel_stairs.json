@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:stripped_jungle_log_roundel"
+    }
+  },
+  "result": {
+    "item": "ata:stripped_jungle_log_roundel_stairs",
+    "count": 4
+  }
+}

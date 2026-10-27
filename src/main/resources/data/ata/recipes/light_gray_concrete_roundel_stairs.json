@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:light_gray_concrete_roundel"
+    }
+  },
+  "result": {
+    "item": "ata:light_gray_concrete_roundel_stairs",
+    "count": 4
+  }
+}

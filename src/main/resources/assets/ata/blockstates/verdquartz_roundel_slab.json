@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/verdquartz_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/verdquartz_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/verdquartz_roundel_slab_top"
+    }
+  }
+}

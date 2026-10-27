@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ata:block/roundel/polished_andesite_roundel_full",
+    "top": "ata:block/roundel/polished_andesite_roundel_full",
+    "side": "ata:block/roundel/polished_andesite_roundel_full"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:weathered_copper_roundel"
+  },
+  "result": "ata:weathered_copper_roundel_slab",
+  "count": 2
+}

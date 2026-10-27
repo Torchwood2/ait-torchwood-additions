@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.jacobempire.ata.core.ATABlocks;
+import uk.jacobempire.ata.core.ATAFuel;
 import uk.jacobempire.ata.core.ATAItems;
 import uk.jacobempire.ata.core.ATASounds;
 import uk.jacobempire.ata.world.ATAWorldGen;
@@ -34,6 +35,7 @@ public class ATA implements ModInitializer {
         ATAItems.register();
         ATASounds.register();
         ATAWorldGen.register();
+        ATAFuel.register();
 
         ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, id("item_group"), FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.ata.item_group"))

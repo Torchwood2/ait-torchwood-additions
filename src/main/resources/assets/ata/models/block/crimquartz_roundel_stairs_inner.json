@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ata:block/roundel/crimquartz_roundel",
+    "top": "ata:block/roundel/crimquartz_roundel",
+    "side": "ata:block/roundel/crimquartz_roundel"
+  }
+}

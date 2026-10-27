@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:end_stone_bricks_roundel"
+    }
+  },
+  "result": {
+    "item": "ata:end_stone_bricks_roundel_stairs",
+    "count": 4
+  }
+}

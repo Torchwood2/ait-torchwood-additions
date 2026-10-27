@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:bluequartz_roundel"
+    }
+  },
+  "result": {
+    "item": "ata:bluequartz_roundel_stairs",
+    "count": 4
+  }
+}

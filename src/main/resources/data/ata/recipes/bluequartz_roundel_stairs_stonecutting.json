@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:bluequartz_roundel"
+  },
+  "result": "ata:bluequartz_roundel_stairs",
+  "count": 1
+}

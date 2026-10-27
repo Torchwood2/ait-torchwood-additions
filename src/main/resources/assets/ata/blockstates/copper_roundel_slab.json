@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/copper_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/copper_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/copper_roundel_slab_top"
+    }
+  }
+}

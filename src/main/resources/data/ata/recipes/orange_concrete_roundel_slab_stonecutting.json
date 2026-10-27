@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:orange_concrete_roundel"
+  },
+  "result": "ata:orange_concrete_roundel_slab",
+  "count": 2
+}

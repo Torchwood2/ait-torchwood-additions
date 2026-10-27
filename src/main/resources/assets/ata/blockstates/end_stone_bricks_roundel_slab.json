@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/end_stone_bricks_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/end_stone_bricks_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/end_stone_bricks_roundel_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "ata:block/roundel/copper_roundel",
+    "top": "ata:block/roundel/copper_roundel",
+    "side": "ata:block/roundel/copper_roundel"
+  }
+}

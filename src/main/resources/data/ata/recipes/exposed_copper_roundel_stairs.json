@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "ata:exposed_copper_roundel"
+    }
+  },
+  "result": {
+    "item": "ata:exposed_copper_roundel_stairs",
+    "count": 4
+  }
+}

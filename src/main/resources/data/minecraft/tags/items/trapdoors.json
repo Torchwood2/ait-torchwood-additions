@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ata:grate_trapdoor",
+    "ata:rusty_grate_trapdoor",
+    "ata:rusty_thick_grate_trapdoor",
+    "ata:thick_grate_trapdoor"
+  ]
+}

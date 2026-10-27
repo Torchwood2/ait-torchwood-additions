@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "ata:block/roundel/pink_concrete_roundel",
+    "top": "ata:block/roundel/pink_concrete_roundel",
+    "side": "ata:block/roundel/pink_concrete_roundel"
+  }
+}

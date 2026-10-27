@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/polished_deepslate_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/polished_deepslate_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/polished_deepslate_roundel_slab_top"
+    }
+  }
+}

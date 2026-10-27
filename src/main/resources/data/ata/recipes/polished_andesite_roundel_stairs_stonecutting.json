@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:polished_andesite_roundel"
+  },
+  "result": "ata:polished_andesite_roundel_stairs",
+  "count": 1
+}

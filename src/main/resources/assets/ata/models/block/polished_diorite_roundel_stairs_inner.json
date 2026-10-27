@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ata:block/roundel/polished_diorite_roundel_full",
+    "top": "ata:block/roundel/polished_diorite_roundel_full",
+    "side": "ata:block/roundel/polished_diorite_roundel_full"
+  }
+}

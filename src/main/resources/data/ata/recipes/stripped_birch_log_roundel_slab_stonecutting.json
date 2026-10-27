@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:stripped_birch_log_roundel"
+  },
+  "result": "ata:stripped_birch_log_roundel_slab",
+  "count": 2
+}

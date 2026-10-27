@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "render_type": "cutout",
+  "textures": {
+    "texture": "ata:block/grate/rusty_thick_grate_block"
+  }
+}

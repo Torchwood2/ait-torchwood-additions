@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:exposed_copper_roundel"
+  },
+  "result": "ata:exposed_copper_roundel_slab",
+  "count": 2
+}

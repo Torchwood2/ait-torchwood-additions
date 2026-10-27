@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/moss_roundel_slab"
+    },
+    "type=double": {
+      "model": "ata:block/moss_roundel"
+    },
+    "type=top": {
+      "model": "ata:block/moss_roundel_slab_top"
+    }
+  }
+}

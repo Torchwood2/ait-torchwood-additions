@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:stripped_cherry_log_roundel"
+  },
+  "result": "ata:stripped_cherry_log_roundel_slab",
+  "count": 2
+}

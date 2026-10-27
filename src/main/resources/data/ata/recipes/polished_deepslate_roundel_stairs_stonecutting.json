@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "ata:polished_deepslate_roundel"
+  },
+  "result": "ata:polished_deepslate_roundel_stairs",
+  "count": 1
+}
