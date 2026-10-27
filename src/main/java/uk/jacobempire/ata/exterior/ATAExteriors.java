@@ -54,7 +54,7 @@ public final class ATAExteriors {
     public enum DoorSound { DEFAULT, POLICE_BOX, BLOOP }
 
     public static final Shape POLICE_BOX = new Shape("police_box",
-            List.of("default", "alt", "alt2", "badwolf", "coral", "dino", "gamblebox", "nathan", "purple", "rhamnous", "tokomak"),
+            List.of("default", "alt", "alt2", "badwolf", "coral", "dino", "gamblebox", "purple", "rhamnous", "tokomak"),
             true, DoorSound.POLICE_BOX, 0.70, 1.3, 2.2);
     /** Deo's red phone booths: the K2 and the K6 share one model, with their own paint jobs. */
     public static final Shape K2_PHONE_BOOTH = new Shape("k2_phone_booth",
