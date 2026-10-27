@@ -1,7 +1,7 @@
 {
   "id": "ata:memorybox_classic",
-  "category": "ait:exterior/police_box",
-  "parent": "ait:exterior/police_box/default",
+  "category": "ait:exterior/classic",
+  "parent": "ait:exterior/classic/prime",
   "texture": "ata:textures/exterior/memorybox_classic.png",
   "emission": "ata:textures/exterior/memorybox_classic_emission.png"
 }
