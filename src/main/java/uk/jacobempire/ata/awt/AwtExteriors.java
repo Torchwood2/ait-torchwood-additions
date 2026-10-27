@@ -59,10 +59,10 @@ public final class AwtExteriors {
     /** Deo's red phone booths: the K2 and the K6 share one model, with their own paint jobs. */
     public static final Shape K2_PHONE_BOOTH = new Shape("k2_phone_booth",
             List.of("default", "battered", "blue", "futuristic", "gloom", "grey", "pink"),
-            false, DoorSound.DEFAULT, 0.64, 0.94, 2.35);
+            false, DoorSound.DEFAULT, 0.57, 0.82, 2.06);
     public static final Shape K6_PHONE_BOOTH = new Shape("k6_phone_booth",
             List.of("default", "battered", "bee", "futuristic", "gloom"),
-            false, DoorSound.DEFAULT, 0.64, 0.94, 2.35);
+            false, DoorSound.DEFAULT, 0.57, 0.82, 2.06);
     /**
      * The Onion: a single "door" that is its beam (shown while open), which bloops open and shut. It always
      * travels with its own takeoff and landing animations (see OnionTravel).

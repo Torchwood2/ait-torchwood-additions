@@ -31,11 +31,14 @@ public final class AwtClient {
     /** For shapes with nothing that glows. */
     private static final Identifier NO_EMISSION = ATA.id("textures/exterior/awt/no_emission.png");
 
+    /** Drawn at 7/8 size, to match AIT's own booth. */
+    private static final float PHONE_BOOTH_SCALE = 0.875f;
+
     /** Phone booth doors open outwards. */
     private static final AwtShapeRender PHONE_BOOTH = new AwtShapeRender(
             AwtModels::phoneBooth, List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "root", "door")),
             AwtModels::phoneBoothDoor, List.of(DoorPart.swing(true, Motion.SWING_POSITIVE, "root", "door")),
-            1.0f, List.of());
+            PHONE_BOOTH_SCALE, List.of());
 
     private static final Map<Shape, AwtShapeRender> RENDER = Map.of(
             // Police box doors open inwards, like the TARDIS's: the +x-hinged door is the one that opens first.
