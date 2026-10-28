@@ -34,6 +34,7 @@ public class ATA implements ModInitializer {
     public static final String MOD_ID = "ata";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+    public static ItemGroup BLOCKS_GROUP;
     public static ItemGroup ITEM_GROUP;
 
     @Override
@@ -51,13 +52,16 @@ public class ATA implements ModInitializer {
         ATAExteriors.register();
         GallifreyCompat.register();
 
+        // Two tabs: building blocks, and everything you hold (atrium, Rift gear, guns).
+        BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP, id("blocks"), FabricItemGroup.builder()
+                .displayName(Text.translatable("itemGroup.ata.blocks"))
+                .icon(() -> new ItemStack(ATABlocks.ALL.isEmpty() ? ATAItems.ATRIUM : ATABlocks.ALL.get(0).asItem()))
+                .entries((context, entries) -> ATABlocks.ALL.forEach(entries::add))
+                .build());
         ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, id("item_group"), FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.ata.item_group"))
                 .icon(() -> new ItemStack(ATAItems.ENERGIZED_ATRIUM))
-                .entries((context, entries) -> {
-                    ATAItems.ALL.forEach(entries::add);
-                    ATABlocks.ALL.forEach(entries::add);
-                })
+                .entries((context, entries) -> ATAItems.ALL.forEach(entries::add))
                 .build());
 
         LOGGER.info("ATA loaded");

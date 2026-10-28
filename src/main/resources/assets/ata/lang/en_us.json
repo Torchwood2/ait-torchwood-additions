@@ -1,5 +1,5 @@
 {
-  "itemGroup.ata.item_group": "ATA",
+  "itemGroup.ata.item_group": "ATA: Items & Gear",
   "block.ata.white_concrete_roundel": "White Concrete Roundel",
   "block.ata.white_concrete_roundel_half": "White Concrete Half Roundel",
   "block.ata.light_gray_concrete_roundel": "Light Gray Concrete Roundel",
@@ -347,5 +347,6 @@
   "exterior.ata.rift_police_box": "Rift Police Box",
   "exterior.ata.desert_police_box": "Desert Police Box",
   "desktop.ata.torchwood_hub": "Torchwood Hub",
-  "desktop.ata.wilds_lodge": "Wilds Lodge"
+  "desktop.ata.wilds_lodge": "Wilds Lodge",
+  "itemGroup.ata.blocks": "ATA: Blocks"
 }
