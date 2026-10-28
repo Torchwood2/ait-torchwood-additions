@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "IRR",
+    "RCI",
+    " PP"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "ata:rift_shard"
+    },
+    "C": {
+      "tag": "c:atrium_cores"
+    },
+    "P": {
+      "item": "ata:torchwood_planks"
+    }
+  },
+  "result": {
+    "item": "ata:rift_carbine"
+  }
+}

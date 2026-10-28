@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ata:rift_helmet",
+    "ata:rift_chestplate",
+    "ata:rift_leggings",
+    "ata:rift_boots"
+  ]
+}

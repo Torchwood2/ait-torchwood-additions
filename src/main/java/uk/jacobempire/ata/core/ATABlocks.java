@@ -117,10 +117,16 @@ public final class ATABlocks {
         return FabricBlockSettings.copyOf(base).mapColor(base.getDefaultMapColor());
     }
 
-    private static Block register(String name, Block block) {
+    /** Registers a block and its item, and adds it to the creative tab. */
+    public static <T extends Block> T register(String name, T block) {
         Registry.register(Registries.BLOCK, ATA.id(name), block);
         Registry.register(Registries.ITEM, ATA.id(name), new BlockItem(block, new Item.Settings()));
         ALL.add(block);
         return block;
+    }
+
+    /** Registers a block with no item of its own (like a potted plant). */
+    public static <T extends Block> T registerNoItem(String name, T block) {
+        return Registry.register(Registries.BLOCK, ATA.id(name), block);
     }
 }

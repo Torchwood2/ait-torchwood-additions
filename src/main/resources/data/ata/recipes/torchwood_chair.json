@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "P  ",
+    "PPP",
+    "S S"
+  ],
+  "key": {
+    "P": {
+      "item": "ata:torchwood_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ata:torchwood_chair",
+    "count": 2
+  }
+}

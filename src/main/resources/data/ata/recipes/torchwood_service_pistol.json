@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "III",
+    " EP",
+    "  P"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "tag": "c:energized_atrium"
+    },
+    "P": {
+      "item": "ata:torchwood_planks"
+    }
+  },
+  "result": {
+    "item": "ata:torchwood_service_pistol"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ata:block/torchwood_slab"
+    },
+    "type=double": {
+      "model": "ata:block/torchwood_planks"
+    },
+    "type=top": {
+      "model": "ata:block/torchwood_slab_top"
+    }
+  }
+}

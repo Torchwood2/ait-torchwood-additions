@@ -1,0 +1,6 @@
+{
+  "parent": "ata:block/chair_template",
+  "textures": {
+    "planks": "minecraft:block/mangrove_planks"
+  }
+}

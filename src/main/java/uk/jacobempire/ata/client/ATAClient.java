@@ -21,6 +21,11 @@ public class ATAClient implements ClientModInitializer {
         // The grates have holes you can see through.
         ATABlocks.CUTOUT.forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
 
+        // Chairs: the seat you sit on is invisible.
+        net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry.register(uk.jacobempire.ata.chair.ATAChairs.SEAT,
+                net.minecraft.client.render.entity.EmptyEntityRenderer::new);
+        uk.jacobempire.ata.chair.ATAChairs.CHAIRS.forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
+
         // ATA's Java-model exteriors: models and textures.
         ATAExteriorsClient.register();
 

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " RS",
+    "RCR",
+    "BR "
+  ],
+  "key": {
+    "R": {
+      "item": "ata:rift_shard"
+    },
+    "S": {
+      "item": "minecraft:spyglass"
+    },
+    "C": {
+      "tag": "c:atrium_cores"
+    },
+    "B": {
+      "item": "ata:rift_block"
+    }
+  },
+  "result": {
+    "item": "ata:rift_lance"
+  }
+}

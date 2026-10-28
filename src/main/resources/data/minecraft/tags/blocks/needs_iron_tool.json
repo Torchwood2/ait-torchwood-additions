@@ -3,6 +3,7 @@
   "values": [
     "ata:atrium_ore",
     "ata:deepslate_atrium_ore",
-    "ata:atrium_block"
+    "ata:atrium_block",
+    "ata:rift_block"
   ]
 }

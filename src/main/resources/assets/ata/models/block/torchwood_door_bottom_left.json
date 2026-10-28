@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "ata:block/torchwood_door_bottom",
+    "top": "ata:block/torchwood_door_top"
+  }
+}

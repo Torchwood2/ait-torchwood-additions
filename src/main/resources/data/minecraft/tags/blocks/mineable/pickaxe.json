@@ -148,6 +148,9 @@
     "ata:yellow_concrete_roundel",
     "ata:yellow_concrete_roundel_half",
     "ata:yellow_concrete_roundel_slab",
-    "ata:yellow_concrete_roundel_stairs"
+    "ata:yellow_concrete_roundel_stairs",
+    "ata:rift_ore",
+    "ata:deepslate_rift_ore",
+    "ata:rift_block"
   ]
 }

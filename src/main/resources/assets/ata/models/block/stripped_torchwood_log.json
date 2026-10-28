@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "ata:block/stripped_torchwood_log_top",
+    "side": "ata:block/stripped_torchwood_log"
+  }
+}

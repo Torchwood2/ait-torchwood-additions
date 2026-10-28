@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "ata:deepslate_rift_ore"
+  },
+  "result": "ata:rift_shard",
+  "experience": 1.0,
+  "cookingtime": 100
+}

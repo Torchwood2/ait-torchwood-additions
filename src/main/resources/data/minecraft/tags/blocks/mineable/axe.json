@@ -32,6 +32,18 @@
     "ata:stripped_spruce_log_roundel",
     "ata:stripped_spruce_log_roundel_half",
     "ata:stripped_spruce_log_roundel_slab",
-    "ata:stripped_spruce_log_roundel_stairs"
+    "ata:stripped_spruce_log_roundel_stairs",
+    "ata:oak_chair",
+    "ata:spruce_chair",
+    "ata:birch_chair",
+    "ata:jungle_chair",
+    "ata:acacia_chair",
+    "ata:dark_oak_chair",
+    "ata:mangrove_chair",
+    "ata:cherry_chair",
+    "ata:bamboo_chair",
+    "ata:crimson_chair",
+    "ata:warped_chair",
+    "ata:torchwood_chair"
   ]
 }

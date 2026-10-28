@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "ata:rift_ore"
+  },
+  "result": "ata:rift_shard",
+  "experience": 1.0,
+  "cookingtime": 200
+}

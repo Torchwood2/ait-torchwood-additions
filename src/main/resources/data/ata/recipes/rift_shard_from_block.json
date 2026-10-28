@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ata:rift_block"
+    }
+  ],
+  "result": {
+    "item": "ata:rift_shard",
+    "count": 9
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "ata:rift_police_box",
+  "category": "ait:exterior/police_box",
+  "parent": "ait:exterior/police_box/default",
+  "texture": "ata:textures/exterior/rift_police_box.png",
+  "emission": "ata:textures/exterior/rift_police_box_emission.png"
+}

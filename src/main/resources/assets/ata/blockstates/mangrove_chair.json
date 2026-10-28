@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ata:block/mangrove_chair"
+    },
+    "facing=east": {
+      "model": "ata:block/mangrove_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ata:block/mangrove_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ata:block/mangrove_chair",
+      "y": 270
+    }
+  }
+}

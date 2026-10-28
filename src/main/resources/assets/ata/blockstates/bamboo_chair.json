@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ata:block/bamboo_chair"
+    },
+    "facing=east": {
+      "model": "ata:block/bamboo_chair",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ata:block/bamboo_chair",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ata:block/bamboo_chair",
+      "y": 270
+    }
+  }
+}

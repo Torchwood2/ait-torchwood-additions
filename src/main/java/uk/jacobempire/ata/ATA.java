@@ -13,6 +13,10 @@ import org.slf4j.LoggerFactory;
 import uk.jacobempire.ata.exterior.ATAExteriors;
 import uk.jacobempire.ata.compat.GallifreyCompat;
 import uk.jacobempire.ata.core.ATABlocks;
+import uk.jacobempire.ata.core.ATAWood;
+import uk.jacobempire.ata.core.ATARift;
+import uk.jacobempire.ata.chair.ATAChairs;
+import uk.jacobempire.ata.gun.ATAGuns;
 import uk.jacobempire.ata.core.ATAFuel;
 import uk.jacobempire.ata.core.ATARewards;
 import uk.jacobempire.ata.core.ATAItems;
@@ -35,6 +39,10 @@ public class ATA implements ModInitializer {
     @Override
     public void onInitialize() {
         ATABlocks.register();
+        ATAWood.register();
+        ATARift.register();
+        ATAChairs.register();
+        ATAGuns.register();
         ATAItems.register();
         ATASounds.register();
         ATAWorldGen.register();
