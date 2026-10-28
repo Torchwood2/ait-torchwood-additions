@@ -26,6 +26,15 @@ public class ATAClient implements ClientModInitializer {
                 net.minecraft.client.render.entity.EmptyEntityRenderer::new);
         uk.jacobempire.ata.chair.ATAChairs.CHAIRS.forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
 
+        // Guns switch to their aiming model while you hold use, like AIT's.
+        for (net.minecraft.item.Item gun : new net.minecraft.item.Item[]{uk.jacobempire.ata.gun.ATAGuns.SERVICE_PISTOL,
+                uk.jacobempire.ata.gun.ATAGuns.RIFT_CARBINE, uk.jacobempire.ata.gun.ATAGuns.RIFT_LANCE}) {
+            net.minecraft.client.item.ModelPredicateProviderRegistry.register(gun, new net.minecraft.util.Identifier("ads"),
+                    (stack, world, entity, seed) -> entity instanceof net.minecraft.entity.player.PlayerEntity
+                            && entity.getMainHandStack() == stack
+                            && net.minecraft.client.MinecraftClient.getInstance().options.useKey.isPressed() ? 1.0f : 0.0f);
+        }
+
         // ATA's Java-model exteriors: models and textures.
         ATAExteriorsClient.register();
 
