@@ -120,7 +120,6 @@
   "sonic.ata.sonic_hammer": "Sonic Hammer",
   "sonic.ata.umbrella_sonic": "Umbrella Sonic",
   "sonic.ata.war_master": "War Master",
-  "desktop.ata.blueberry": "Blueberry",
   "desktop.ata.classic_mystical": "Classic Mystical",
   "desktop.ata.classic_neon": "Classic Neon",
   "desktop.ata.copper": "Copper",
@@ -291,5 +290,7 @@
   "animation.ata.onion_landing": "Onion Landing",
   "exterior.ata.k2_phone_booth": "K2 Phone Booth",
   "exterior.ata.k6_phone_booth": "K6 Phone Booth",
-  "exterior.ata.blueberry_box": "Blueberry Box"
+  "exterior.ata.blueberry_box": "Blueberry Box",
+  "desktop.ata.blueberry": "Blueberry",
+  "desktop.ata.medieval": "Medieval"
 }
