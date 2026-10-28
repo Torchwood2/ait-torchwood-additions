@@ -28,12 +28,17 @@ public class ATAClient implements ClientModInitializer {
 
         // Guns switch to their aiming model while you hold use, like AIT's.
         for (net.minecraft.item.Item gun : new net.minecraft.item.Item[]{uk.jacobempire.ata.gun.ATAGuns.SERVICE_PISTOL,
-                uk.jacobempire.ata.gun.ATAGuns.RIFT_CARBINE, uk.jacobempire.ata.gun.ATAGuns.RIFT_LANCE}) {
+                uk.jacobempire.ata.gun.ATAGuns.RIFT_CARBINE, uk.jacobempire.ata.gun.ATAGuns.RIFT_LANCE,
+                uk.jacobempire.ata.gun.ATAGuns.TORCHWOOD_PISTOL}) {
             net.minecraft.client.item.ModelPredicateProviderRegistry.register(gun, new net.minecraft.util.Identifier("ads"),
                     (stack, world, entity, seed) -> entity instanceof net.minecraft.entity.player.PlayerEntity
                             && entity.getMainHandStack() == stack
                             && net.minecraft.client.MinecraftClient.getInstance().options.useKey.isPressed() ? 1.0f : 0.0f);
         }
+
+        // The Torchwood Pistol's bullets: gold staser bolts.
+        net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry.register(uk.jacobempire.ata.gun.ATAGuns.BULLET_ENTITY,
+                uk.jacobempire.ata.client.render.BulletEntityRenderer::new);
 
         // ATA's Java-model exteriors: models and textures.
         ATAExteriorsClient.register();

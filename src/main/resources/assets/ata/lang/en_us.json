@@ -348,5 +348,11 @@
   "exterior.ata.desert_police_box": "Desert Police Box",
   "desktop.ata.torchwood_hub": "Torchwood Hub",
   "desktop.ata.wilds_lodge": "Wilds Lodge",
-  "itemGroup.ata.blocks": "ATA: Blocks"
+  "itemGroup.ata.blocks": "ATA: Blocks",
+  "item.ata.torchwood_pistol": "Torchwood Pistol",
+  "item.ata.bullet": "Bullet",
+  "item.ata.bullet_magazine": "Bullet Magazine",
+  "entity.ata.bullet": "Bullet",
+  "tooltip.ata.bullet_magazine.rounds": "%s / %s rounds",
+  "tooltip.ata.bullet_magazine.help": "Right-click Bullets onto it to load, then right-click it onto a Torchwood Pistol"
 }

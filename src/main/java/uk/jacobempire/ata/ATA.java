@@ -61,7 +61,7 @@ public class ATA implements ModInitializer {
         ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, id("item_group"), FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.ata.item_group"))
                 .icon(() -> new ItemStack(ATAItems.ENERGIZED_ATRIUM))
-                .entries((context, entries) -> ATAItems.ALL.forEach(entries::add))
+                .entries((context, entries) -> ATAItems.ALL.forEach(item -> entries.add(item.getDefaultStack())))
                 .build());
 
         LOGGER.info("ATA loaded");
