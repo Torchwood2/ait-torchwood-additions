@@ -94,6 +94,7 @@ dependencies {
     // Supplementaries (needs Moonlight Lib)
     modImplementation "curse.maven:supplementaries-412082:${project.supplementaries_file}"
     modImplementation "maven.modrinth:moonlight:${project.moonlight_version}"
+    modImplementation "curse.maven:amendments-896746:${project.amendments_file}"
 
     // Copper & Tuff Backport
     modImplementation "curse.maven:copper-tuff-backport-fabric-950738:${project.copper_tuff_file}"
