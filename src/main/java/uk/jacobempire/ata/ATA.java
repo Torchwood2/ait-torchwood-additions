@@ -14,6 +14,7 @@ import uk.jacobempire.ata.exterior.ATAExteriors;
 import uk.jacobempire.ata.compat.GallifreyCompat;
 import uk.jacobempire.ata.core.ATABlocks;
 import uk.jacobempire.ata.core.ATAFuel;
+import uk.jacobempire.ata.core.ATARewards;
 import uk.jacobempire.ata.core.ATAItems;
 import uk.jacobempire.ata.core.ATASounds;
 import uk.jacobempire.ata.world.ATAWorldGen;
@@ -38,6 +39,7 @@ public class ATA implements ModInitializer {
         ATASounds.register();
         ATAWorldGen.register();
         ATAFuel.register();
+        ATARewards.register();
         ATAExteriors.register();
         GallifreyCompat.register();
 
