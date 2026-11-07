@@ -1,0 +1,13 @@
+{
+  "id": "ata:gallifrey_hocotate",
+  "models": {
+    "inactive": "ata:item/sonic/gallifrey/hocotate",
+    "interaction": "ata:item/sonic/gallifrey/hocotate",
+    "overload": "ata:item/sonic/gallifrey/hocotate",
+    "scanning": "ata:item/sonic/gallifrey/hocotate",
+    "tardis": "ata:item/sonic/gallifrey/hocotate"
+  },
+  "loyalty": {
+    "type": "NEUTRAL"
+  }
+}
