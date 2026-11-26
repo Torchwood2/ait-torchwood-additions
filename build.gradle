@@ -13,9 +13,12 @@ base {
 repositories {
     // AmbleKit (AIT's library)
     maven {
-        url = "https://maven.amblelabs.dev"
+        url = "https://jitpack.io"
+        metadataSources {
+            artifact()
+        }
         content {
-            includeGroup "dev.amblelabs"
+            includeGroup "com.github.amblelabs"
         }
     }
 
@@ -76,7 +79,7 @@ dependencies {
     modImplementation "maven.modrinth:ait:${project.ait_version}"
 
     // AIT's own dependencies
-    modImplementation("dev.amblelabs:modkit:${project.amblekit_version}") {
+    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     // AmbleKit bundles these inside its jar for players, but the dev client doesn't load jars nested in
