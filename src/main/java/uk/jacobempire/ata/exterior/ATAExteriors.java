@@ -9,7 +9,6 @@ import dev.amble.ait.registry.impl.door.DoorRegistry;
 import dev.amble.ait.registry.impl.exterior.ExteriorVariantRegistry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import uk.jacobempire.ata.ATA;
 import uk.jacobempire.ata.core.ATASounds;
@@ -138,14 +137,8 @@ public final class ATAExteriors {
         }
 
         @Override
-        public Vec3d adjustPortalPos(Vec3d pos, Direction direction) {
-            return switch (direction) {
-                case DOWN, UP -> pos;
-                case NORTH -> pos.add(0, 0.05, -0.45);
-                case SOUTH -> pos.add(0, 0.05, 0.45);
-                case WEST -> pos.add(-0.45, 0.05, 0);
-                case EAST -> pos.add(0.45, 0.05, 0);
-            };
+        public Vec3d getPortalPosition() {
+            return new Vec3d(0, 0.05, -0.45);
         }
     }
 
@@ -169,20 +162,8 @@ public final class ATAExteriors {
         }
 
         @Override
-        public Vec3d adjustPortalPos(Vec3d pos, byte direction) {
-            double d = shape.portalDist();
-            double diag = d * 0.707;
-            return switch (direction) {
-                case 0 -> pos.add(0, -0.05, -d); // north
-                case 1, 2, 3 -> pos.add(diag, -0.05, -diag);
-                case 4 -> pos.add(d, -0.05, 0); // east
-                case 5, 6, 7 -> pos.add(diag, -0.05, diag);
-                case 8 -> pos.add(0, -0.05, d); // south
-                case 9, 10, 11 -> pos.add(-diag, -0.05, diag);
-                case 12 -> pos.add(-d, -0.05, 0); // west
-                case 13, 14, 15 -> pos.add(-diag, -0.05, -diag);
-                default -> pos;
-            };
+        public Vec3d getPortalPosition() {
+            return new Vec3d(0, -0.05, -shape.portalDist());
         }
 
         @Override
