@@ -18,6 +18,12 @@ import uk.jacobempire.ata.core.ATABlocks;
 public class ATAClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        // Crew plushies: drawn in hand and in the inventory by AmbleKit's plushie renderer.
+        uk.jacobempire.ata.plushie.ATAPlushies.ITEMS.forEach(item -> net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry.INSTANCE
+                .register(item, new dev.amble.plushies.client.PlushieDynamicItemRenderer()));
+        net.minecraft.client.render.block.entity.BlockEntityRendererFactories.register(
+                uk.jacobempire.ata.plushie.ATAPlushies.BLOCK_ENTITY, dev.amble.plushies.client.MarketablePlushieRenderer::new);
+
         // The grates have holes you can see through.
         ATABlocks.CUTOUT.forEach(block -> BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()));
 

@@ -50,6 +50,7 @@ public class ATA implements ModInitializer {
         ATAFuel.register();
         ATARewards.register();
         ATAExteriors.register();
+        uk.jacobempire.ata.plushie.ATAPlushies.register();
         GallifreyCompat.register();
 
         // Two tabs: building blocks, and everything you hold (atrium, Rift gear, guns).
@@ -61,7 +62,10 @@ public class ATA implements ModInitializer {
         ITEM_GROUP = Registry.register(Registries.ITEM_GROUP, id("item_group"), FabricItemGroup.builder()
                 .displayName(Text.translatable("itemGroup.ata.item_group"))
                 .icon(() -> new ItemStack(ATAItems.ENERGIZED_ATRIUM))
-                .entries((context, entries) -> ATAItems.ALL.forEach(item -> entries.add(item.getDefaultStack())))
+                .entries((context, entries) -> {
+                    ATAItems.ALL.forEach(item -> entries.add(item.getDefaultStack()));
+                    uk.jacobempire.ata.plushie.ATAPlushies.ITEMS.forEach(entries::add);
+                })
                 .build());
 
         LOGGER.info("ATA loaded");

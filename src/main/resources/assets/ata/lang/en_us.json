@@ -357,5 +357,10 @@
   "item.ata.bullet_magazine": "Bullet Magazine",
   "entity.ata.bullet": "Bullet",
   "tooltip.ata.bullet_magazine.rounds": "%s / %s rounds",
-  "tooltip.ata.bullet_magazine.help": "Right-click Bullets onto it to load, then right-click it onto a Torchwood Pistol"
+  "tooltip.ata.bullet_magazine.help": "Right-click Bullets onto it to load, then right-click it onto a Torchwood Pistol",
+  "block.ata.diceline_plushie": "DiceLine (Marketable Plushie)",
+  "block.ata.diceline_purple_plushie": "DiceLine (Marketable Plushie)",
+  "block.ata.torchwood_one_plushie": "Torchwood_one (Marketable Plushie)",
+  "block.ata.bluenbygamer_plushie": "Bluenbygamer (Marketable Plushie)",
+  "block.ata.samtiz_plushie": "SamTiz (Marketable Plushie)"
 }
