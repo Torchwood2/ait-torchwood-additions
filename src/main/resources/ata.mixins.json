@@ -9,7 +9,7 @@
     "StaserBoltDamageMixin"
   ],
   "client": [
-    "client.LogoDrawerMixin"
+    "client.TitleScreenAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

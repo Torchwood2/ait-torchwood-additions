@@ -1,6 +1,6 @@
 package uk.jacobempire.ata.client.exterior;
 
-import dev.amble.ait.client.AITModClient;
+import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -72,16 +72,9 @@ public record ShapeRender(Supplier<TexturedModelData> exterior, List<DoorPart> e
     }
 
     /** Moves the doors to match the TARDIS's door state. */
-    static void pose(ModelPart root, DoorHandler door, List<DoorPart> doors) {
-        boolean animate = AITModClient.CONFIG.animateDoors;
+    static void pose(ModelPart root, DoorHandler door, List<DoorPart> doors, float tickDelta) {
         for (DoorPart part : doors) {
-            float open;
-            if (animate) {
-                open = part.left() ? door.getLeftRot() : door.getRightRot();
-            } else {
-                boolean isOpen = part.left() ? (door.isLeftOpen() || door.isOpen()) : (door.isRightOpen() || door.areBothOpen());
-                open = isOpen ? 1.0f : 0.0f;
-            }
+            float open = part.left() ? DoorModel.leftRot(door, tickDelta) : DoorModel.rightRot(door, tickDelta);
             ModelPart model = part.find(root);
             model.resetTransform();
             switch (part.motion()) {

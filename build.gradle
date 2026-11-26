@@ -13,12 +13,9 @@ base {
 repositories {
     // AmbleKit (AIT's library)
     maven {
-        url = "https://jitpack.io"
-        metadataSources {
-            artifact()
-        }
+        url = "https://maven.amblelabs.dev"
         content {
-            includeGroup "com.github.amblelabs"
+            includeGroup "dev.amblelabs"
         }
     }
 
@@ -79,7 +76,7 @@ dependencies {
     modImplementation "maven.modrinth:ait:${project.ait_version}"
 
     // AIT's own dependencies
-    modImplementation("com.github.amblelabs:modkit:${project.amblekit_version}") {
+    modImplementation("dev.amblelabs:modkit:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     // AmbleKit bundles these inside its jar for players, but the dev client doesn't load jars nested in
@@ -87,7 +84,6 @@ dependencies {
     modImplementation("dev.drtheo:multidim:${project.multidim_version}") { exclude(group: "net.fabricmc.fabric-api") }
     modImplementation("dev.drtheo:scheduler:${project.scheduler_version}") { exclude(group: "net.fabricmc.fabric-api") }
     modImplementation("dev.drtheo:queue:${project.queue_version}") { exclude(group: "net.fabricmc.fabric-api") }
-    modImplementation "maven.modrinth:animator:${project.animator_version}"
     implementation "net.objecthunter:exp4j:0.4.8"
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
 

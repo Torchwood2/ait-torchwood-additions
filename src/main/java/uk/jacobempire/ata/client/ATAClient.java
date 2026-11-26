@@ -43,6 +43,9 @@ public class ATAClient implements ClientModInitializer {
         // ATA's Java-model exteriors: models and textures.
         ATAExteriorsClient.register();
 
+        // AIT: Torchwood Additions title logo (while AIT's custom menu is on).
+        ATALogoDrawer.register();
+
         // Optional GUI recolours for AIT's monitor screens, switched on in Options > Resource Packs.
         ModContainer mod = FabricLoader.getInstance().getModContainer(ATA.MOD_ID).orElseThrow();
         for (String[] pack : new String[][]{{"blueshiftgui", "Blue Shift GUI"}, {"redshiftgui", "Red Shift GUI"},

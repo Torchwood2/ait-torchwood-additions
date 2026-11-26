@@ -6,6 +6,7 @@ import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.util.math.MatrixStack;
@@ -43,7 +44,7 @@ public class ShapeExteriorModel extends SimpleExteriorModel {
                                      VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
         matrices.push();
         place(matrices);
-        ShapeRender.pose(this.root, tardis.door(), shape.exteriorDoors());
+        ShapeRender.pose(this.root, tardis.door(), shape.exteriorDoors(), MinecraftClient.getInstance().getTickDelta());
         super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, alpha);
         matrices.pop();
     }
@@ -54,7 +55,7 @@ public class ShapeExteriorModel extends SimpleExteriorModel {
         if (falling.tardis().isEmpty()) return;
         matrices.push();
         place(matrices);
-        ShapeRender.pose(this.root, falling.tardis().get().door(), shape.exteriorDoors());
+        ShapeRender.pose(this.root, falling.tardis().get().door(), shape.exteriorDoors(), MinecraftClient.getInstance().getTickDelta());
         super.renderEntity(falling, root, matrices, vertices, light, overlay, red, green, blue, alpha);
         matrices.pop();
     }
@@ -62,7 +63,7 @@ public class ShapeExteriorModel extends SimpleExteriorModel {
     @Override
     public void renderDoors(ClientTardis tardis, ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices, VertexConsumer vertices,
                             int light, int overlay, float red, float green, float blue, float alpha, boolean isBOTI) {
-        ShapeRender.pose(this.root, tardis.door(), shape.exteriorDoors());
+        ShapeRender.pose(this.root, tardis.door(), shape.exteriorDoors(), MinecraftClient.getInstance().getTickDelta());
         if (!isBOTI) return;
         matrices.push();
         place(matrices);

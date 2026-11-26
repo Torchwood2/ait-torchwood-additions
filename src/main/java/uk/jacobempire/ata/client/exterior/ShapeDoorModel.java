@@ -35,7 +35,7 @@ public class ShapeDoorModel extends DoorModel {
     public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity linkable, ModelPart root, MatrixStack matrices,
                                      VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha, float tickDelta) {
         matrices.push();
-        ShapeRender.pose(this.root, tardis.door(), shape.doorDoors());
+        ShapeRender.pose(this.root, tardis.door(), shape.doorDoors(), tickDelta);
         matrices.scale(shape.scale(), shape.scale(), shape.scale());
         matrices.translate(0, -1.5f, 0);
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180f));
